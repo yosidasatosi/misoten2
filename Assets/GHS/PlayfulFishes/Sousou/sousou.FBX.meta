@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 0ef54e46f7a747248b904e8c6cd01db9
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bone103
+    100002: Bone104
+    100004: Bone105
+    100006: Bone106
+    100008: Bone107
+    100010: Bone108
+    100012: Bone109
+    100014: Bone110
+    100016: Bone111
+    100018: Bone112
+    100020: Bone113
+    100022: Bone114
+    100024: Bone115
+    100026: Bone116
+    100028: Bone117
+    100030: Bone118
+    100032: Bone119
+    100034: Bone120
+    100036: Bone121
+    100038: Bone122
+    100040: Bone123
+    100042: Dummy009
+    100044: Dummy010
+    100046: Sousou
+    100048: //RootNode
+    100050: sousou_oeil_d
+    100052: sousou_oeil_g
+    400000: Bone103
+    400002: Bone104
+    400004: Bone105
+    400006: Bone106
+    400008: Bone107
+    400010: Bone108
+    400012: Bone109
+    400014: Bone110
+    400016: Bone111
+    400018: Bone112
+    400020: Bone113
+    400022: Bone114
+    400024: Bone115
+    400026: Bone116
+    400028: Bone117
+    400030: Bone118
+    400032: Bone119
+    400034: Bone120
+    400036: Bone121
+    400038: Bone122
+    400040: Bone123
+    400042: Dummy009
+    400044: Dummy010
+    400046: Sousou
+    400048: //RootNode
+    400050: sousou_oeil_d
+    400052: sousou_oeil_g
+    2100000: Sousou_corps
+    2100002: Sousou_oeil_d
+    2100004: Sousou_oeil_g
+    2300000: sousou_oeil_d
+    2300002: sousou_oeil_g
+    3300000: sousou_oeil_d
+    3300002: sousou_oeil_g
+    4300000: Sousou
+    4300002: sousou_oeil_d
+    4300004: sousou_oeil_g
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Sousou
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
