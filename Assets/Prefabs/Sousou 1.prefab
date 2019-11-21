@@ -915,6 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   TurningSpeed: 3
+  TimeLimit: 4
 --- !u!1 &6015903891516540759
 GameObject:
   m_ObjectHideFlags: 0
