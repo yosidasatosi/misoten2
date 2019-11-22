@@ -24,9 +24,10 @@ public class IwashiManager : MonoBehaviour
     public List<GameObject> IwashiModel = new List<GameObject>();
 
     private int TarNo;
-
     private int ParentNo;
+
     private bool Parent;
+    private bool seisei;
 
     private Quaternion TargetRotation;
 
@@ -38,6 +39,7 @@ public class IwashiManager : MonoBehaviour
         TarNo = 0;
         ParentNo = 0;
         Parent = false;
+        seisei = false;
         TargetRotation = Quaternion.identity;
 
         Iwashi = new GameObject[pop];
@@ -46,24 +48,29 @@ public class IwashiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!seisei)
         {
-            Quaternion Rot = Quaternion.identity;
-
-            //for (int i = 0; i < IwashiModel.Count; i++)
-            for (int i = 0; i < pop; i++)
+            if (Input.GetButtonDown("Fire1"))
             {
-                //Debug.Log("ManagerUpdate");
+                Quaternion Rot = Quaternion.identity;
 
-                // プレファブからIwashiオブジェクトを生成
-                Iwashi[i] = (GameObject)Instantiate(
-                    iwashiPrefab,               // 生成するプレファブ設定
-                    Camera.main.transform       // 親設定
-                    );
+                //for (int i = 0; i < IwashiModel.Count; i++)
+                for (int i = 0; i < pop; i++)
+                {
+                    //Debug.Log("ManagerUpdate");
 
-                // 初期位置設定
-                Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
-                Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
+                    // プレファブからIwashiオブジェクトを生成
+                    Iwashi[i] = (GameObject)Instantiate(
+                        iwashiPrefab,               // 生成するプレファブ設定
+                        Camera.main.transform       // 親設定
+                        );
+
+                    // 初期位置設定
+                    Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
+                    Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
+                }
+
+                seisei = true;
             }
         }
     }
@@ -125,6 +132,9 @@ public class IwashiManager : MonoBehaviour
 
     public void DeleteClone()
     {
+        TarNo = 0;
+        seisei = false;
+
         for (int i = 0; i < pop; i++)
         {
             GameObject.Destroy(Iwashi[i]);

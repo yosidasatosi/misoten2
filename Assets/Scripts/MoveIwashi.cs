@@ -72,7 +72,6 @@ public class MoveIwashi : MonoBehaviour
                 {
                     iwashimanager.DeleteClone();
                 }
-
                 else
                 {
                     // iwashimanagerのSetIwashiメソッドを呼び出す(目的角度を取得)
