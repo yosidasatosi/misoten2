@@ -17,6 +17,7 @@ public class MoveIwashi : MonoBehaviour
     private bool rotate;
     private bool change;
     private bool Parent;
+    private bool Delete;
 
     private float count;
 
@@ -33,6 +34,8 @@ public class MoveIwashi : MonoBehaviour
         TarRot = Quaternion.identity;
 
         rotate = false;
+
+        Delete = false;
 
         Parent = iwashimanager.GetParent();
 
@@ -53,8 +56,6 @@ public class MoveIwashi : MonoBehaviour
         transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
 
         // 方向転換条件
-        //if (transform.localPosition.z < 4.0f && !change)
-        //if (Input.GetKeyDown("space")/* && !change && !rotate*/)
         if (TimeLimit < count)
         {
             rotate = true;
@@ -67,8 +68,16 @@ public class MoveIwashi : MonoBehaviour
         {
             if (Parent)
             {
-                // iwashimanagerのSetIwashiメソッドを呼び出す(目的角度を取得)
-                iwashimanager.SetIwashi(/*iwashimanager.GetTargetPosition(), */transform.localPosition);
+                if (iwashimanager.GetTarget())
+                {
+                    iwashimanager.DeleteClone();
+                }
+
+                else
+                {
+                    // iwashimanagerのSetIwashiメソッドを呼び出す(目的角度を取得)
+                    iwashimanager.SetIwashi(/*iwashimanager.GetTargetPosition(), */transform.localPosition);
+                }
             }
 
             // 

@@ -30,6 +30,8 @@ public class IwashiManager : MonoBehaviour
 
     private Quaternion TargetRotation;
 
+    private GameObject[] Iwashi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class IwashiManager : MonoBehaviour
         ParentNo = 0;
         Parent = false;
         TargetRotation = Quaternion.identity;
+
+        Iwashi = new GameObject[pop];
     }
 
     // Update is called once per frame
@@ -52,14 +56,14 @@ public class IwashiManager : MonoBehaviour
                 //Debug.Log("ManagerUpdate");
 
                 // プレファブからIwashiオブジェクトを生成
-                GameObject Iwashi = (GameObject)Instantiate(
+                Iwashi[i] = (GameObject)Instantiate(
                     iwashiPrefab,               // 生成するプレファブ設定
                     Camera.main.transform       // 親設定
                     );
 
                 // 初期位置設定
-                Iwashi.transform.localPosition = IwashiModel[i].transform.localPosition;
-                Iwashi.transform.localRotation = IwashiModel[i].transform.localRotation;
+                Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
+                Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
             }
         }
     }
@@ -67,10 +71,27 @@ public class IwashiManager : MonoBehaviour
     // 目的角度設定
     public void SetIwashi(/*Vector3 targetposition, */Vector3 position)
     {
-        TarNo %= TargetPosition.Count;
+        //TarNo %= TargetPosition.Count;
 
-        // 目的角度設定
-        TargetRotation = Quaternion.LookRotation(TargetPosition[TarNo++] - position);
+        if (!GetTarget())
+        {
+            // 目的角度設定
+            TargetRotation = Quaternion.LookRotation(TargetPosition[TarNo++] - position);
+        }
+
+        Debug.Log("TarNo" + TarNo);
+    }
+
+    public bool GetTarget()
+    {
+        if (TarNo >= TargetPosition.Count)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public MoveData SetMoveData()
@@ -100,5 +121,13 @@ public class IwashiManager : MonoBehaviour
         ParentNo++;
 
         return Parent;
+    }
+
+    public void DeleteClone()
+    {
+        for (int i = 0; i < pop; i++)
+        {
+            GameObject.Destroy(Iwashi[i]);
+        }
     }
 }
