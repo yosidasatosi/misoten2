@@ -5,40 +5,32 @@ using UnityEngine;
 public class MoveFish : MonoBehaviour
 {
     //prefabパブリック変数
-    [SerializeField]
     public GameObject fishPrefab;
 
     //魚の数
-    [SerializeField]
     public int numFish = 20;
 
     //魚格納配列
-    [SerializeField]
     public GameObject[] allFish;
 
     //魚の泳ぐ範囲
-    [SerializeField]
     public Vector3 swimLimits = new Vector3(5,5,5);
 
     //魚の速度
     [Header("Fish Settings")]
     [Range(0.0f,5.0f)]
-    [SerializeField]
     public float minSpeed;
     [Range(0.0f,5.0f)]
-    [SerializeField]
     public float maxSpeed;
 
-
+    //周囲の魚との距離
     [Range(1.0f,10.0f)]
-    [SerializeField]
     public float neighbourDistance;
 
     [Range(0.0f,5.0f)]
-    [SerializeField]
     public float rotationSpeed;
 
-
+    public Flock flock;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +57,6 @@ public class MoveFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
 

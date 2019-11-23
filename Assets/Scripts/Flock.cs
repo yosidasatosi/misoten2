@@ -8,6 +8,7 @@ public class Flock : MonoBehaviour
     public MoveFish isMove;
 
     //速度
+    [SerializeField]
     private float speed;
 
 
@@ -22,7 +23,7 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //魚を前方に移動 Z軸
+        //魚を前方に移動 X軸
         transform.Translate(-Time.deltaTime * speed, 0, 0);
         MoveRules();
 
@@ -64,11 +65,10 @@ public class Flock : MonoBehaviour
                     groupSize++;
 
                     //距離が１.０より小さかったら
-                    if (nDistance < 0.5f)
+                    if (nDistance < 1.0f)
                     {
                         //他の魚から離れる処理
                         vavoid = vavoid + (this.transform.position - go.transform.position);
-
                     }
 
                     //群の中の魚の速度の合計　魚の速度をgspeedに加算
@@ -77,6 +77,7 @@ public class Flock : MonoBehaviour
                 }
             }
         }
+
 
         if (groupSize > 0)
         {
@@ -93,7 +94,6 @@ public class Flock : MonoBehaviour
             //魚を必要な方向に回転
             if (direction != Vector3.zero)
             {
-                Debug.Log("rotation");
                 transform.rotation = Quaternion.Slerp(transform.rotation,
                                    Quaternion.LookRotation(direction),
                                    isMove.rotationSpeed * Time.deltaTime);
