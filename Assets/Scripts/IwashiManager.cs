@@ -24,11 +24,14 @@ public class IwashiManager : MonoBehaviour
     public List<GameObject> IwashiModel = new List<GameObject>();
 
     private int TarNo;
-
     private int ParentNo;
+
     private bool Parent;
+    private bool seisei;
 
     private Quaternion TargetRotation;
+
+    private GameObject[] Iwashi;
 
     // Start is called before the first frame update
     void Start()
@@ -36,30 +39,38 @@ public class IwashiManager : MonoBehaviour
         TarNo = 0;
         ParentNo = 0;
         Parent = false;
+        seisei = false;
         TargetRotation = Quaternion.identity;
+
+        Iwashi = new GameObject[pop];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!seisei)
         {
-            Quaternion Rot = Quaternion.identity;
-
-            //for (int i = 0; i < IwashiModel.Count; i++)
-            for (int i = 0; i < pop; i++)
+            if (Input.GetButtonDown("Fire1"))
             {
-                //Debug.Log("ManagerUpdate");
+                Quaternion Rot = Quaternion.identity;
 
-                // プレファブからIwashiオブジェクトを生成
-                GameObject Iwashi = (GameObject)Instantiate(
-                    iwashiPrefab,               // 生成するプレファブ設定
-                    Camera.main.transform       // 親設定
-                    );
+                //for (int i = 0; i < IwashiModel.Count; i++)
+                for (int i = 0; i < pop; i++)
+                {
+                    //Debug.Log("ManagerUpdate");
 
-                // 初期位置設定
-                Iwashi.transform.localPosition = IwashiModel[i].transform.localPosition;
-                Iwashi.transform.localRotation = IwashiModel[i].transform.localRotation;
+                    // プレファブからIwashiオブジェクトを生成
+                    Iwashi[i] = (GameObject)Instantiate(
+                        iwashiPrefab,               // 生成するプレファブ設定
+                        Camera.main.transform       // 親設定
+                        );
+
+                    // 初期位置設定
+                    Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
+                    Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
+                }
+
+                seisei = true;
             }
         }
     }
@@ -67,10 +78,27 @@ public class IwashiManager : MonoBehaviour
     // 目的角度設定
     public void SetIwashi(/*Vector3 targetposition, */Vector3 position)
     {
-        TarNo %= TargetPosition.Count;
+        //TarNo %= TargetPosition.Count;
 
-        // 目的角度設定
-        TargetRotation = Quaternion.LookRotation(TargetPosition[TarNo++] - position);
+        if (!GetTarget())
+        {
+            // 目的角度設定
+            TargetRotation = Quaternion.LookRotation(TargetPosition[TarNo++] - position);
+        }
+
+        Debug.Log("TarNo" + TarNo);
+    }
+
+    public bool GetTarget()
+    {
+        if (TarNo >= TargetPosition.Count)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public MoveData SetMoveData()
@@ -100,5 +128,16 @@ public class IwashiManager : MonoBehaviour
         ParentNo++;
 
         return Parent;
+    }
+
+    public void DeleteClone()
+    {
+        TarNo = 0;
+        seisei = false;
+
+        for (int i = 0; i < pop; i++)
+        {
+            GameObject.Destroy(Iwashi[i]);
+        }
     }
 }
