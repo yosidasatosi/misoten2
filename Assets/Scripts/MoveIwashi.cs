@@ -10,7 +10,7 @@ public class MoveIwashi : MonoBehaviour
 
     private GameObject gameobject;
 
-    private IwashiManager iwashimanager;
+    private IwashiManager IwashiScr;
 
     private Quaternion TarRot;
 
@@ -28,7 +28,7 @@ public class MoveIwashi : MonoBehaviour
         gameobject = GameObject.Find("Iwashi");
 
         // IwashiManagerのSetIwashiメソッドを使用
-        iwashimanager = gameobject.GetComponent<IwashiManager>();
+        IwashiScr = gameobject.GetComponent<IwashiManager>();
 
         // 回転用変数の初期化
         TarRot = Quaternion.identity;
@@ -37,14 +37,18 @@ public class MoveIwashi : MonoBehaviour
 
         Delete = false;
 
+<<<<<<< HEAD
         Parent = iwashimanager.GetParent();
+=======
+        Parent = IwashiScr.GetParent();
+>>>>>>> 0d4eb334772ed0117adffaad45682073c272290a
 
         if (Parent)
         {
-            iwashimanager.SetIwashi(transform.localPosition);
+            IwashiScr.SetIwashi(transform.localPosition);
         }
 
-        transform.localRotation = iwashimanager.GetTargetRotation();
+        transform.localRotation = IwashiScr.GetTargetRotation();
 
         count = 0.0f;
     }
@@ -68,6 +72,7 @@ public class MoveIwashi : MonoBehaviour
         {
             if (Parent)
             {
+<<<<<<< HEAD
                 if (iwashimanager.GetTarget())
                 {
                     iwashimanager.DeleteClone();
@@ -76,11 +81,21 @@ public class MoveIwashi : MonoBehaviour
                 {
                     // iwashimanagerのSetIwashiメソッドを呼び出す(目的角度を取得)
                     iwashimanager.SetIwashi(/*iwashimanager.GetTargetPosition(), */transform.localPosition);
+=======
+                if (IwashiScr.CheckTarget())
+                {
+                    IwashiScr.DeleteClone();
+                }
+                else
+                {
+                    // IwashiScrのSetIwashiメソッドを呼び出す(目的角度を取得)
+                    IwashiScr.SetIwashi(transform.localPosition);
+>>>>>>> 0d4eb334772ed0117adffaad45682073c272290a
                 }
             }
 
             // 
-            TarRot = iwashimanager.GetTargetRotation();
+            TarRot = IwashiScr.GetTargetRotation();
 
             rotate = false;
             change = true;
@@ -92,10 +107,12 @@ public class MoveIwashi : MonoBehaviour
             // 回転(滑らかに)
             transform.localRotation = Quaternion.Slerp(transform.localRotation, TarRot, Time.deltaTime * TurningSpeed);
 
-            if (CheckRotate(TarRot, transform.localRotation))
-            {
-                change = false;
-            }
+            //if (CheckRotate(TarRot, transform.localRotation))
+            //{
+            //    change = false;
+            //}
+
+            //Debug.Log("a");
         }
 
         count += Time.deltaTime;
