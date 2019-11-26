@@ -72,5 +72,15 @@ PrefabInstance:
       propertyPath: PlayerNo
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4717928444417550385, guid: 7326f5b9499494341a8e0e65ae5b729a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717928444417550385, guid: 7326f5b9499494341a8e0e65ae5b729a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.46
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7326f5b9499494341a8e0e65ae5b729a, type: 3}
