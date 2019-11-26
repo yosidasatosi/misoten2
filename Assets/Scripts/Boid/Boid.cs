@@ -70,6 +70,7 @@ public class Boid : MonoBehaviour
     //壁に当たりそうになったら向きを変える
     void UpdateWalls()
     {
+
         if (!simulation)
         {
             return;
@@ -89,9 +90,9 @@ public class Boid : MonoBehaviour
 
     Vector3 CalcAccelAgainstWall(float distance,Vector3 dir)
     {
-        if (distance < param.wallDistance)
+        if (distance < param.wallScall)
         {
-            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallDistance));
+            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallScall));
         }
         else
         {
@@ -160,7 +161,8 @@ public class Boid : MonoBehaviour
             force += (pos - neignbor.pos).normalized;    //自分の座標と近隣個体の座標の距離の正規化ベクトルを加算
         }
 
-        force /= neighbors.Count;
+
+        force /= neighbors.Count;                       //離れる力を近隣の個体でわる
 
         accel += force * param.separationWeight;
     }
@@ -168,10 +170,14 @@ public class Boid : MonoBehaviour
     //近隣の個体と速度を合わせる
     void UpdateAlignment()
     {
-        if (neighbors.Count == 0) return;
+        if (neighbors.Count == 0)
+        {
+            return;
+        }
 
         var averageVelocity = Vector3.zero;
 
+        //List総当たり
         foreach (var neighbor in neighbors)
         {
             averageVelocity += neighbor.velocity;
@@ -184,13 +190,19 @@ public class Boid : MonoBehaviour
     //近隣の個体の中心に移動する
     void UpdateCohesion()
     {
-        if (neighbors.Count == 0) return;
+        if (neighbors.Count == 0)
+        {
+            return;
+        }
 
         var averagePos = Vector3.zero;
+
+        //List総当たり
         foreach (var neighbor in neighbors)
         {
             averagePos += neighbor.pos;
         }
+
         averagePos /= neighbors.Count;
 
         accel += (averagePos - pos) * param.cohesionWeight;
