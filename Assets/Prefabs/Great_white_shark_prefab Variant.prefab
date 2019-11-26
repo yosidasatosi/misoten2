@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &5154638238191897787
+--- !u!114 &3589932371644791396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2169782421065715257}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c92c038515242d28f997db276ea56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5154638238191897787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169782421065715257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cddac8d10b614c5caecdb8117a4e1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isMove: {fileID: 0}
+  speed: 0
 --- !u!1001 &2168506509724601073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,7 +35,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1276205554959560, guid: 110b86501fff2414186f46873d54d1ea, type: 3}
       propertyPath: m_Name
-      value: Great_white_shark_prefab
+      value: Great_white_shark_prefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4329573320410458, guid: 110b86501fff2414186f46873d54d1ea, type: 3}
       propertyPath: m_LocalPosition.x

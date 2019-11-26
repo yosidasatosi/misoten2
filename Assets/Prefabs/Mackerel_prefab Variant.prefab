@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &6442916834751028596
+--- !u!114 &6394687956341033832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3693879233443919114}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c92c038515242d28f997db276ea56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6442916834751028596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3693879233443919114}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cddac8d10b614c5caecdb8117a4e1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isMove: {fileID: 0}
+  speed: 0
 --- !u!1001 &3694672940451796050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,7 +35,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1502900601577816, guid: 428bbdf30777be043a92558682b7757a, type: 3}
       propertyPath: m_Name
-      value: Mackerel_prefab
+      value: Mackerel_prefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4590658642912836, guid: 428bbdf30777be043a92558682b7757a, type: 3}
       propertyPath: m_LocalPosition.x

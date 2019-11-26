@@ -37,7 +37,7 @@ public class FishGroup : MonoBehaviour
             //量産するGameObjectの位置　（ランダム）
             this.BoidsChildren[i].transform.position
                 = new Vector3(Random.Range(-5f, 5f),
-                              this.BoidsChild.transform.position.y,
+                              0,
                               Random.Range(-5f, 5f));
         }
     }
@@ -106,6 +106,8 @@ public class FishGroup : MonoBehaviour
             child.GetComponent<Rigidbody>().velocity = child.GetComponent<Rigidbody>().velocity * this.Turbulence
                 + averageVelocity * (1f - this.Turbulence);
         }
+
+        BoidsBoss.transform.Translate(-Time.deltaTime * 1.0f, 0, 0);
 
     }
 }

@@ -79,9 +79,9 @@ public class Flock : MonoBehaviour
         }
 
 
-        if (groupSize > 0)
+        if (groupSize <= 0)
         {
-
+           
             //平均の中心をグループサイズで除算
             vcenter = vcenter / groupSize;
 
