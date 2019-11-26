@@ -12,6 +12,9 @@ public class MoveUtubo : MonoBehaviour
 
     private Vector3 InitPosition;
     private float Speed;
+    private float MoveTime;
+
+    private float count;
 
     // 動作用変数
     private bool Move;
@@ -47,6 +50,10 @@ public class MoveUtubo : MonoBehaviour
         // 移動速度を保存
         Speed = utubomanager.GetSpeed();
 
+        MoveTime = utubomanager.GetMoveTime();
+
+        Timing = utubomanager.GetTiming();
+
         // メインカメラコンポーネントの取得
         CamObj = Camera.main.gameObject;
 
@@ -61,17 +68,27 @@ public class MoveUtubo : MonoBehaviour
 
         if (Move)
         {
-            a = InitPosition.x - transform.position.x;
-            if (a < 0)
-            {
-                a *= -1;
-            }
+            //a = InitPosition.x - transform.position.x;
+            //if (a < 0)
+            //{
+            //    a *= -1;
+            //}
 
-            if (a < 3.0f)
+            if (count < MoveTime)
             {
                 // 前方向に移動
                 transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
+
+                count += Time.deltaTime;
             }
+            else
+            {
+
+            }
+            //else
+            //{
+            //    count = 0.0f;
+            //}
         }
         else
         {

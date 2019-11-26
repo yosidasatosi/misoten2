@@ -6,7 +6,9 @@ public class IwashiManager : MonoBehaviour
 {
     public GameObject iwashiPrefab;
 
-    public int pop;
+    public int pop = 50;
+
+    public float PopTime = 2.0f;
 
     [System.Serializable]
     public class MoveData
@@ -26,8 +28,12 @@ public class IwashiManager : MonoBehaviour
     private int TarNo;
     private int ParentNo;
 
+    private float PopCount;
+
     private bool Parent;
     private bool seisei;
+
+    private bool Delete;
 
     private Quaternion TargetRotation;
 
@@ -38,8 +44,11 @@ public class IwashiManager : MonoBehaviour
     {
         TarNo = 0;
         ParentNo = 0;
+
         Parent = false;
         seisei = false;
+        Delete = false;
+
         TargetRotation = Quaternion.identity;
 
         Iwashi = new GameObject[pop];
@@ -48,17 +57,21 @@ public class IwashiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PopTime > PopCount)
+        {
+            UpdateTimer();
+        }
+
         if (!seisei)
         {
-            if (Input.GetButtonDown("Fire1"))
+            //if (Input.GetButtonDown("Fire1"))
+            if (PopTime < PopCount)
             {
                 Quaternion Rot = Quaternion.identity;
 
                 //for (int i = 0; i < IwashiModel.Count; i++)
                 for (int i = 0; i < pop; i++)
                 {
-                    //Debug.Log("ManagerUpdate");
-
                     // プレファブからIwashiオブジェクトを生成
                     Iwashi[i] = (GameObject)Instantiate(
                         iwashiPrefab,               // 生成するプレファブ設定
@@ -75,21 +88,27 @@ public class IwashiManager : MonoBehaviour
         }
     }
 
+    private void UpdateTimer()
+    {
+        PopCount += Time.deltaTime;
+    }
+
     // 目的角度設定
     public void SetIwashi(/*Vector3 targetposition, */Vector3 position)
     {
         //TarNo %= TargetPosition.Count;
 
-        if (!GetTarget())
+        if (!CheckTarget())
         {
             // 目的角度設定
             TargetRotation = Quaternion.LookRotation(TargetPosition[TarNo++] - position);
         }
 
-        Debug.Log("TarNo" + TarNo);
+        //Debug.Log("TarNo" + TarNo);
     }
 
-    public bool GetTarget()
+    // 
+    public bool CheckTarget()
     {
         if (TarNo >= TargetPosition.Count)
         {
@@ -101,17 +120,20 @@ public class IwashiManager : MonoBehaviour
         }
     }
 
+    // 
     public MoveData SetMoveData()
 
     {
         return MoveDatas[0];
     }
 
+    // 
     public Quaternion GetTargetRotation()
     {
         return TargetRotation;
     }
 
+    // 
     public bool GetParent()
     {
         ParentNo %= pop;
@@ -130,14 +152,23 @@ public class IwashiManager : MonoBehaviour
         return Parent;
     }
 
+    // 
     public void DeleteClone()
     {
         TarNo = 0;
-        seisei = false;
+        //seisei = false;
 
         for (int i = 0; i < pop; i++)
         {
             GameObject.Destroy(Iwashi[i]);
         }
+
+        Delete = true;
+    }
+
+    // 
+    public bool GetDelete()
+    {
+        return Delete;
     }
 }

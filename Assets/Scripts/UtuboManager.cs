@@ -14,6 +14,8 @@ public class UtuboManager : MonoBehaviour
     {
         public GameObject utubomodel;
         public float StartSpeed;
+        public float MoveTime;
+        public float Timing;
         //public int StartSpeed;
         //public int EndSpeed;
     }
@@ -75,6 +77,16 @@ public class UtuboManager : MonoBehaviour
         no %= InitDatas.Count;
 
         return InitDatas[no].StartSpeed;
+    }
+
+    public float GetMoveTime()
+    {
+        return InitDatas[no].MoveTime;
+    }
+
+    public float GetTiming()
+    {
+        return InitDatas[no].Timing;
     }
 
     //public Speed GetSpeed()
