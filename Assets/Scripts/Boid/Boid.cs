@@ -9,8 +9,8 @@ public class Boid : MonoBehaviour
     public Vector3 pos { get; private set; }
     public Vector3 velocity { get; private set; }
 
-        GameObject groupCenter;
-    Vector3 centerPos;
+    GameObject groupCenter;
+    Vector3 wallScall;
 
     //速度
     private Vector3 accel = Vector3.zero;
@@ -22,6 +22,9 @@ public class Boid : MonoBehaviour
     {
         pos = transform.position;
         velocity = transform.forward * param.initSpeed;
+        wallScall =new Vector3(transform.position.x+param.wallScall,
+                               transform.position.y+param.wallScall,
+                               transform.position.z+param.wallScall);
     }
 
     // Update is called once per frame
@@ -77,28 +80,34 @@ public class Boid : MonoBehaviour
         }
 
         //範囲スケール
-        var scale = param.wallScall * 0.5f;
-        accel += CalcAccelAgainstWall(-scale - pos.x, Vector3.right) +
-                 CalcAccelAgainstWall(-scale - pos.y, Vector3.up) +
-                 CalcAccelAgainstWall(-scale - pos.z, Vector3.forward) +
-                 CalcAccelAgainstWall(+scale - pos.x, Vector3.left) +
-                 CalcAccelAgainstWall(+scale - pos.y, Vector3.down) +
-                 CalcAccelAgainstWall(+scale - pos.z, Vector3.back);
+        var scale = wallScall * 0.5f;
+
+
+        accel += CalcAccelAgainstWall(-scale.x - pos.x, Vector3.right) +
+                 CalcAccelAgainstWall(-scale.y - pos.y, Vector3.up) +
+                 CalcAccelAgainstWall(-scale.z - pos.z, Vector3.forward) +
+                 CalcAccelAgainstWall(scale.x - pos.x, Vector3.left) +
+                 CalcAccelAgainstWall(scale.y - pos.y, Vector3.down) +
+                 CalcAccelAgainstWall(scale.z - pos.z, Vector3.back);
 
 
     }
 
     Vector3 CalcAccelAgainstWall(float distance,Vector3 dir)
     {
+        //壁との距離がwallScallより小さい
         if (distance < param.wallScall)
         {
-            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallScall));
+
+            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallDistance));
         }
         else
         {
             return Vector3.zero;
         }
     }
+
+
 
     //近隣個体を探してneighborsリスト更新
     void UpdateNeighbors()
