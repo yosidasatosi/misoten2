@@ -264,6 +264,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1562945808827195913, guid: d768b4467d66b0d4ba62bbf72c6d7ea1,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d768b4467d66b0d4ba62bbf72c6d7ea1, type: 3}
 --- !u!4 &46540180 stripped
@@ -366,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4658816660336684, guid: 61ab0752665983d4fb3c2de41413354d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.991413
+      value: 25.15
       objectReference: {fileID: 0}
     - target: {fileID: 4658816660336684, guid: 61ab0752665983d4fb3c2de41413354d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -511,7 +516,7 @@ GameObject:
   - component: {fileID: 300526289}
   m_Layer: 0
   m_Name: Utubo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,6 +842,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 503706550}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &519611869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8510703131968041311, guid: 647aff467ba22f141bde3a39ec73a9e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385399601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &519611870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519611869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: b7a145e60f3360040a0d2bdfbaccac59, type: 2}
 --- !u!4 &521254560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8510703131968041304, guid: 647aff467ba22f141bde3a39ec73a9e3,
@@ -1093,6 +1117,11 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4122372274442100981, guid: bde387f9c4eb6c549b72cd177ef91dad,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bde387f9c4eb6c549b72cd177ef91dad, type: 3}
 --- !u!4 &621261810 stripped
@@ -1292,6 +1321,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 951865089273083729, guid: 0ec8ee763be3313429614ac87bab5809,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec8ee763be3313429614ac87bab5809, type: 3}
 --- !u!4 &683982132 stripped
@@ -1470,7 +1504,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817014982}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.16, z: 1.24}
@@ -1564,7 +1598,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023067826}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.16, z: 1.24}
@@ -6580,6 +6614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082156016562174055, guid: 41fbf565b118ea341a17eb613578afb8,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8953952520876286855, guid: 41fbf565b118ea341a17eb613578afb8,
         type: 3}
@@ -12357,7 +12396,7 @@ GameObject:
   - component: {fileID: 1843830817}
   m_Layer: 0
   m_Name: UtuboObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
