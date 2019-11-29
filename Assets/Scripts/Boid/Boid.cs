@@ -17,9 +17,16 @@ public class Boid : MonoBehaviour
     
     List<Boid> neighbors = new List<Boid>();
 
+    //角度
+    private Quaternion angle;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        //子オブジェクトをy軸に90度回転
+        transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 90, 0);
+        
         pos = transform.position;
         velocity = transform.forward * param.initSpeed;
         wallScall =new Vector3(transform.position.x+param.wallScall,
@@ -91,23 +98,26 @@ public class Boid : MonoBehaviour
                  CalcAccelAgainstWall(scale.z - pos.z, Vector3.back);
 
 
+
+
     }
+
 
     Vector3 CalcAccelAgainstWall(float distance,Vector3 dir)
     {
         //壁との距離がwallScallより小さい
         if (distance < param.wallScall)
         {
-
-            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallDistance));
+            return dir * (param.wallWeight / Mathf.Abs(distance / param.wallScall));
         }
         else
         {
             return Vector3.zero;
         }
+
+
+
     }
-
-
 
     //近隣個体を探してneighborsリスト更新
     void UpdateNeighbors()
