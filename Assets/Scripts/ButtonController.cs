@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    //[Range(1, 4)]
-    //public int PlayerNo = 1;
+    [Range(1, 4)]
+    public int PlayerNo = 1;
     public int pushCnt = 0;
     public int pushMaxCnt = 0;
     public bool ButtonMode;
