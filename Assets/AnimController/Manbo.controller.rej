@@ -1,0 +1,10 @@
+diff a/Assets/AnimController/Manbo.controller b/Assets/AnimController/Manbo.controller	(rejected hunks)
+@@ -70,7 +70,7 @@
+   m_MirrorParameterActive: 0
+   m_CycleOffsetParameterActive: 0
+   m_TimeParameterActive: 0
+-  m_Motion: {fileID: 1827226128182048838, guid: 4963952ff637a7d40a99799da6c7a493,
++  m_Motion: {fileID: 1827226128182048838, guid: 730da552a083ef3449f479b1d3d15b0e,
+     type: 3}
+   m_Tag: 
+   m_SpeedParameter: Speed

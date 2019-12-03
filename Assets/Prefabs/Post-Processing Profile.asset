@@ -78,7 +78,7 @@ MonoBehaviour:
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -135,15 +135,9 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-<<<<<<< HEAD
-          slope: {r: 0.98894364, g: 1, b: 1, a: 0}
-          power: {r: 0.96682954, g: 1, b: 1, a: 0}
-          offset: {r: 0.94045657, g: 0.9783643, b: 1, a: 0}
-=======
-          slope: {r: 0.9968187, g: 0.9719304, b: 1, a: 0}
-          power: {r: 0.9650351, g: 0.98925656, b: 1, a: 0}
-          offset: {r: 0.962054, g: 0.9816244, b: 1, a: 0}
->>>>>>> master
+          slope: {r: 1, g: 0.9845198, b: 0.9845198, a: 0}
+          power: {r: 0.69672495, g: 0.7503106, b: 1, a: 0}
+          offset: {r: 1, g: 0.95356, b: 0.9535601, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}
