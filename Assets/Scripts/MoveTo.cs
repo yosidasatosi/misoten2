@@ -62,7 +62,7 @@ public class MoveTo : MonoBehaviour
         }
 
         // 座標データの初期化
-        data.startData = player.transform.position - mainCamera.transform.position;
+        data.startData = player.transform.localPosition;
         data.startPos = player.transform.position;
     }
 
@@ -123,7 +123,7 @@ public class MoveTo : MonoBehaviour
     {
         if (data.endPosData[patternState] == new Vector3(0.0f, 0.0f, 0.0f)) return;
 
-        if (time == 150) moveOn = false;
+        if (time == 120) moveOn = false;
 
         if (!moveOn)
         {
