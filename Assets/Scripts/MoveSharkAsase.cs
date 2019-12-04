@@ -21,6 +21,7 @@ public class MoveSharkAsase : MonoBehaviour
     public float Speed = 10.0f;
 
     private float sum;
+    private float count;
 
     private GameObject gameobject;
 
@@ -46,24 +47,30 @@ public class MoveSharkAsase : MonoBehaviour
     {
         if (IwashiScr.GetDelete())
         {
-            if (Mode == 1)
+            if (PopTime < count)
             {
-                sum = InitDatas[MoveMode].limit + transform.localPosition.x;
-
-                if (sum > 0 && sum > InitDatas[MoveMode].limit * 2 || sum < 0 && sum < InitDatas[MoveMode].limit * 2)
+                if (Mode == 1)
                 {
-                    if (MoveMode < InitDatas.Count - 1)
-                    {
-                        MoveMode++;
-                        //MoveMode %= InitDatas.Count;
+                    sum = InitDatas[MoveMode].limit + transform.localPosition.x;
 
-                        transform.localPosition = InitDatas[MoveMode].position;
-                        transform.localRotation = Quaternion.Euler(InitDatas[MoveMode].rotation);
+                    if (sum > 0 && sum > InitDatas[MoveMode].limit * 2 || sum < 0 && sum < InitDatas[MoveMode].limit * 2)
+                    {
+                        if (MoveMode < InitDatas.Count - 1)
+                        {
+                            MoveMode++;
+                            //MoveMode %= InitDatas.Count;
+
+                            transform.localPosition = InitDatas[MoveMode].position;
+                            transform.localRotation = Quaternion.Euler(InitDatas[MoveMode].rotation);
+                        }
                     }
                 }
+                transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
             }
-
-            transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
+            else
+            {
+                count += Time.deltaTime;
+            }
         }
     }
 }
