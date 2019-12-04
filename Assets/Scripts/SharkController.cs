@@ -37,7 +37,7 @@ public class SharkController : MonoBehaviour
 
     // オブジェクト
     public GameObject[] shark;
-    public GameObject button;
+    private GameObject button;
     public Camera mainCamera;
 
     private int modelState;
