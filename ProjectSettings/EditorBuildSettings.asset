@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: ecdf1f28f22e4ee4284b9598f29271d6
-  - enabled: 1
-    path: Assets/Scenes/asase.unity
-    guid: 1d7ad0ba80cd8e4488e529d5cabfd4e3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/kaikou.unity
     guid: 5b4c2e5967e75d341a8b9f7b4a6f75ab
