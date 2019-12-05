@@ -16,24 +16,25 @@ public class EventMoveController : MonoBehaviour
     };
 
     // パターン関係データ
+    public GameObject obj;
     public MoveData data;           // 動きのデータ
     public int   patternState;      // 現在のパターン番号
     public float[] changeTime;      // パターン変更時間
     public int[] movePattern;      // パターン格納
     private int nextState;          // 次のパターン番号
     private float startTime;        // パターン開始時間
-    private float moveTime = 3.0f;         // 移動時間
+    public float[] moveTime;         // 移動時間
     private Vector3 velocity = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
     {
-        data = new MoveData();
-
         for (int i = 0; i < movePattern.Length; i++)
         {
             movePattern[i] = i;
         }
+
+        data.endPos = data.endPosData[0];
     }
 
     // Update is called once per frame
@@ -41,6 +42,13 @@ public class EventMoveController : MonoBehaviour
     {
         // 現在時間の取得
         float nowTime = Time.realtimeSinceStartup - startTime;
+        Vector3 diff = data.endPos - obj.transform.position;
+
+        if (diff.magnitude > 0.01f)
+        {
+            obj.transform.rotation = Quaternion.LookRotation(diff); //向きを変更する
+        }
+
         // パターンの変更チェック
         CheckPattern(nowTime);
         // 移動
@@ -57,8 +65,10 @@ public class EventMoveController : MonoBehaviour
         nextState++;
 
         // 位置の設定
-        transform.SetPositionAndRotation(data.startData[patternState], data.rotData[patternState]);
+        obj.transform.SetPositionAndRotation(data.startData[patternState], data.rotData[patternState]);
         startTime = Time.realtimeSinceStartup;
+
+        data.endPos = data.endPosData[patternState];
     }
 
     //====================================================
@@ -79,7 +89,7 @@ public class EventMoveController : MonoBehaviour
     void Move()
     {
         // 移動
-        transform.position =
-            Vector3.SmoothDamp(transform.position, data.endPos, ref velocity, moveTime);
+        obj.transform.position =
+            Vector3.SmoothDamp(obj.transform.position, data.endPos, ref velocity, moveTime[patternState]);
     }
 }
