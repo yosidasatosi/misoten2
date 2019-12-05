@@ -18,15 +18,22 @@ public class Boid : MonoBehaviour
     List<Boid> neighbors = new List<Boid>();
 
     //角度
-    private Quaternion angle;
+    private Quaternion rotation;
+    //変更角度
+    [SerializeField]
+    private float rotateAngle = 45f;
+    //回転スピード
+    [SerializeField]
+    private float rotateSpeed = 1f;
 
+    
 
     // Start is called before the first frame update
     void Start()
     {
         //子オブジェクトをy軸に90度回転
         transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 90, 0);
-        
+        rotation = transform.rotation;
         pos = transform.position;
         velocity = transform.forward * param.initSpeed;
         wallScall =new Vector3(transform.position.x+param.wallScall,
@@ -37,6 +44,7 @@ public class Boid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //近隣個体を探してneighborsリスト更新
         UpdateNeighbors();
 
@@ -88,20 +96,31 @@ public class Boid : MonoBehaviour
 
         //範囲スケール
         var scale = wallScall * 0.5f;
+        var distance = scale - pos;
 
 
-        accel += CalcAccelAgainstWall(-scale.x - pos.x, Vector3.right) +
-                 CalcAccelAgainstWall(-scale.y - pos.y, Vector3.up) +
-                 CalcAccelAgainstWall(-scale.z - pos.z, Vector3.forward) +
-                 CalcAccelAgainstWall(scale.x - pos.x, Vector3.left) +
-                 CalcAccelAgainstWall(scale.y - pos.y, Vector3.down) +
-                 CalcAccelAgainstWall(scale.z - pos.z, Vector3.back);
+        //accel += CalcAccelAgainstWall(-scale.x - pos.x, Vector3.right) +
+        //         CalcAccelAgainstWall(-scale.y - pos.y, Vector3.up) +
+        //         CalcAccelAgainstWall(-scale.z - pos.z, Vector3.forward) +
+        //         CalcAccelAgainstWall(scale.x - pos.x, Vector3.left) +
+        //         CalcAccelAgainstWall(scale.y - pos.y, Vector3.down) +
+        //         CalcAccelAgainstWall(scale.z - pos.z, Vector3.back);
 
+        
+   
 
-
+       
 
     }
 
+    public void RelayOnTriggerEnter(Collider collider)
+    {
+        //Debug.Log("hit");
+        
+        
+
+
+    }
 
     Vector3 CalcAccelAgainstWall(float distance,Vector3 dir)
     {
@@ -114,10 +133,11 @@ public class Boid : MonoBehaviour
         {
             return Vector3.zero;
         }
-
-
-
     }
+
+    
+
+    
 
     //近隣個体を探してneighborsリスト更新
     void UpdateNeighbors()
