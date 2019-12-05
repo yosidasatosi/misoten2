@@ -25,6 +25,7 @@ public class SharkController : MonoBehaviour
         PATTERN_MAX
     }
 
+    [System.Serializable]
     // ギミック動作のデータのインナークラス
     public class MoveData
     {
@@ -37,7 +38,7 @@ public class SharkController : MonoBehaviour
 
     // オブジェクト
     public GameObject[] shark;
-    private GameObject button;
+    public GameObject button;
     public Camera mainCamera;
 
     private int modelState;
@@ -51,6 +52,7 @@ public class SharkController : MonoBehaviour
     private int atcTime;
     private bool atcFlag;
     private bool changeState;
+    public int changeMove;          // moveの関数変更開始パターン
     // 定数データ
     private Vector3 velocity = Vector3.zero;
     private const int patternMax = (int)MOVE_PATTERN.PATTERN_MAX;   // パターンの最大番号
@@ -121,10 +123,21 @@ public class SharkController : MonoBehaviour
 
         if (!changeState)
         {
-            if (patternState > (int)MOVE_PATTERN.PATTERN02 && (int)nowTime == 1.0f)
+            if(patternState > (int)MOVE_PATTERN.PATTERN02 && (int)nowTime == 1.0f)
             {
                 anim.Play("CINEMA_4D___ 0", 0, 0.0f);
             }
+
+            //if (patternState > (int)MOVE_PATTERN.PATTERN02 && (int)nowTime == 1.0f)
+            //{
+            //    Vector3 tempPos = shark[modelState].transform.position;
+            //    // パターン３からモデル変更
+            //    shark[modelState].SetActive(false);
+            //    modelState++;
+            //    shark[modelState].SetActive(true);
+            //    // 位置の設定
+            //    shark[modelState].transform.SetPositionAndRotation(tempPos, data.rotData[patternState]);
+            //}
 
             // 状態遷移時間の確認
             CheckPattern(nowTime);
@@ -172,6 +185,14 @@ public class SharkController : MonoBehaviour
             // モデルの変更
             ChangeModel();
 
+            // パターン３からモデル変更
+            //if (patternState > (int)MOVE_PATTERN.PATTERN04)
+            //{
+            //    shark[modelState].SetActive(false);
+            //    modelState--;
+            //    shark[modelState].SetActive(true);
+            //}
+
             // 位置の設定
             shark[modelState].transform.SetPositionAndRotation(mainCamera.transform.position + data.startData[patternState],
                                                                                     data.rotData[patternState]);
@@ -179,7 +200,7 @@ public class SharkController : MonoBehaviour
         }
 
         //　 
-        if(patternState == (int)MOVE_PATTERN.PATTERN05)
+        if(patternState == changeMove)
         {
             patternState = nextState;
             changeState = true;
