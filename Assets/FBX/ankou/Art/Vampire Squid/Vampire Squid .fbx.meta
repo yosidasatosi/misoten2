@@ -1,0 +1,1369 @@
+fileFormatVersion: 2
+guid: 18837fc3183ce9e479e0a0f05867484c
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: BodyMain
+    100004: Camera
+    100006: CTRL_Tentacle_Collapse
+    100008: CTRL_Tentacle_Lower
+    100010: CTRL_Tentacle_Mid
+    100012: Fin_1_L
+    100014: Fin_1_R
+    100016: Fin_2_L
+    100018: Fin_2_R
+    100020: Lamp
+    100022: Lamp_001
+    100024: Mantle
+    100026: Tentacle_A_1
+    100028: Tentacle_A_2
+    100030: Tentacle_A_3
+    100032: Tentacle_B_1
+    100034: Tentacle_B_2
+    100036: Tentacle_B_3
+    100038: Tentacle_C_1
+    100040: Tentacle_C_2
+    100042: Tentacle_C_3
+    100044: Tentacle_D_1
+    100046: Tentacle_D_2
+    100048: Tentacle_D_3
+    100050: Tentacle_E_1
+    100052: Tentacle_E_2
+    100054: Tentacle_E_3
+    100056: Tentacle_F_1
+    100058: Tentacle_F_2
+    100060: Tentacle_F_3
+    100062: Tentacle_G_1
+    100064: Tentacle_G_2
+    100066: Tentacle_G_3
+    100068: Tentacle_H_1
+    100070: Tentacle_H_2
+    100072: Tentacle_H_3
+    100074: //RootNode
+    100076: Vampire_Squid_Model
+    100078: Rig
+    100080: Root
+    100082: Vapire_Squid_HiPoly
+    100084: Vapire_Squid_HiPoly_MeshPart0
+    100086: Vapire_Squid_HiPoly_MeshPart1
+    100088: Vapire_Squid_HiPoly_MeshPart10
+    100090: Vapire_Squid_HiPoly_MeshPart11
+    100092: Vapire_Squid_HiPoly_MeshPart12
+    100094: Vapire_Squid_HiPoly_MeshPart13
+    100096: Vapire_Squid_HiPoly_MeshPart14
+    100098: Vapire_Squid_HiPoly_MeshPart15
+    100100: Vapire_Squid_HiPoly_MeshPart16
+    100102: Vapire_Squid_HiPoly_MeshPart17
+    100104: Vapire_Squid_HiPoly_MeshPart18
+    100106: Vapire_Squid_HiPoly_MeshPart19
+    100108: Vapire_Squid_HiPoly_MeshPart2
+    100110: Vapire_Squid_HiPoly_MeshPart3
+    100112: Vapire_Squid_HiPoly_MeshPart4
+    100114: Vapire_Squid_HiPoly_MeshPart5
+    100116: Vapire_Squid_HiPoly_MeshPart6
+    100118: Vapire_Squid_HiPoly_MeshPart7
+    100120: Vapire_Squid_HiPoly_MeshPart8
+    100122: Vapire_Squid_HiPoly_MeshPart9
+    400000: Armature
+    400002: BodyMain
+    400004: Camera
+    400006: CTRL_Tentacle_Collapse
+    400008: CTRL_Tentacle_Lower
+    400010: CTRL_Tentacle_Mid
+    400012: Fin_1_L
+    400014: Fin_1_R
+    400016: Fin_2_L
+    400018: Fin_2_R
+    400020: Lamp
+    400022: Lamp_001
+    400024: Mantle
+    400026: Tentacle_A_1
+    400028: Tentacle_A_2
+    400030: Tentacle_A_3
+    400032: Tentacle_B_1
+    400034: Tentacle_B_2
+    400036: Tentacle_B_3
+    400038: Tentacle_C_1
+    400040: Tentacle_C_2
+    400042: Tentacle_C_3
+    400044: Tentacle_D_1
+    400046: Tentacle_D_2
+    400048: Tentacle_D_3
+    400050: Tentacle_E_1
+    400052: Tentacle_E_2
+    400054: Tentacle_E_3
+    400056: Tentacle_F_1
+    400058: Tentacle_F_2
+    400060: Tentacle_F_3
+    400062: Tentacle_G_1
+    400064: Tentacle_G_2
+    400066: Tentacle_G_3
+    400068: Tentacle_H_1
+    400070: Tentacle_H_2
+    400072: Tentacle_H_3
+    400074: //RootNode
+    400076: Vampire_Squid_Model
+    400078: Rig
+    400080: Root
+    400082: Vapire_Squid_HiPoly
+    400084: Vapire_Squid_HiPoly_MeshPart0
+    400086: Vapire_Squid_HiPoly_MeshPart1
+    400088: Vapire_Squid_HiPoly_MeshPart10
+    400090: Vapire_Squid_HiPoly_MeshPart11
+    400092: Vapire_Squid_HiPoly_MeshPart12
+    400094: Vapire_Squid_HiPoly_MeshPart13
+    400096: Vapire_Squid_HiPoly_MeshPart14
+    400098: Vapire_Squid_HiPoly_MeshPart15
+    400100: Vapire_Squid_HiPoly_MeshPart16
+    400102: Vapire_Squid_HiPoly_MeshPart17
+    400104: Vapire_Squid_HiPoly_MeshPart18
+    400106: Vapire_Squid_HiPoly_MeshPart19
+    400108: Vapire_Squid_HiPoly_MeshPart2
+    400110: Vapire_Squid_HiPoly_MeshPart3
+    400112: Vapire_Squid_HiPoly_MeshPart4
+    400114: Vapire_Squid_HiPoly_MeshPart5
+    400116: Vapire_Squid_HiPoly_MeshPart6
+    400118: Vapire_Squid_HiPoly_MeshPart7
+    400120: Vapire_Squid_HiPoly_MeshPart8
+    400122: Vapire_Squid_HiPoly_MeshPart9
+    2300000: Vapire_Squid_HiPoly_MeshPart0
+    2300002: Vapire_Squid_HiPoly_MeshPart1
+    2300004: Vapire_Squid_HiPoly_MeshPart10
+    2300006: Vapire_Squid_HiPoly_MeshPart11
+    2300008: Vapire_Squid_HiPoly_MeshPart12
+    2300010: Vapire_Squid_HiPoly_MeshPart13
+    2300012: Vapire_Squid_HiPoly_MeshPart14
+    2300014: Vapire_Squid_HiPoly_MeshPart15
+    2300016: Vapire_Squid_HiPoly_MeshPart16
+    2300018: Vapire_Squid_HiPoly_MeshPart17
+    2300020: Vapire_Squid_HiPoly_MeshPart18
+    2300022: Vapire_Squid_HiPoly_MeshPart19
+    2300024: Vapire_Squid_HiPoly_MeshPart2
+    2300026: Vapire_Squid_HiPoly_MeshPart3
+    2300028: Vapire_Squid_HiPoly_MeshPart4
+    2300030: Vapire_Squid_HiPoly_MeshPart5
+    2300032: Vapire_Squid_HiPoly_MeshPart6
+    2300034: Vapire_Squid_HiPoly_MeshPart7
+    2300036: Vapire_Squid_HiPoly_MeshPart8
+    2300038: Vapire_Squid_HiPoly_MeshPart9
+    3300000: Vapire_Squid_HiPoly_MeshPart0
+    3300002: Vapire_Squid_HiPoly_MeshPart1
+    3300004: Vapire_Squid_HiPoly_MeshPart10
+    3300006: Vapire_Squid_HiPoly_MeshPart11
+    3300008: Vapire_Squid_HiPoly_MeshPart12
+    3300010: Vapire_Squid_HiPoly_MeshPart13
+    3300012: Vapire_Squid_HiPoly_MeshPart14
+    3300014: Vapire_Squid_HiPoly_MeshPart15
+    3300016: Vapire_Squid_HiPoly_MeshPart16
+    3300018: Vapire_Squid_HiPoly_MeshPart17
+    3300020: Vapire_Squid_HiPoly_MeshPart18
+    3300022: Vapire_Squid_HiPoly_MeshPart19
+    3300024: Vapire_Squid_HiPoly_MeshPart2
+    3300026: Vapire_Squid_HiPoly_MeshPart3
+    3300028: Vapire_Squid_HiPoly_MeshPart4
+    3300030: Vapire_Squid_HiPoly_MeshPart5
+    3300032: Vapire_Squid_HiPoly_MeshPart6
+    3300034: Vapire_Squid_HiPoly_MeshPart7
+    3300036: Vapire_Squid_HiPoly_MeshPart8
+    3300038: Vapire_Squid_HiPoly_MeshPart9
+    4300000: Vampire_Squid_Model
+    4300002: Vapire_Squid_HiPoly_MeshPart0
+    4300004: Vapire_Squid_HiPoly_MeshPart1
+    4300006: Vapire_Squid_HiPoly_MeshPart2
+    4300008: Vapire_Squid_HiPoly_MeshPart3
+    4300010: Vapire_Squid_HiPoly_MeshPart4
+    4300012: Vapire_Squid_HiPoly_MeshPart5
+    4300014: Vapire_Squid_HiPoly_MeshPart6
+    4300016: Vapire_Squid_HiPoly_MeshPart7
+    4300018: Vapire_Squid_HiPoly_MeshPart8
+    4300020: Vapire_Squid_HiPoly_MeshPart9
+    4300022: Vapire_Squid_HiPoly_MeshPart10
+    4300024: Vapire_Squid_HiPoly_MeshPart11
+    4300026: Vapire_Squid_HiPoly_MeshPart12
+    4300028: Vapire_Squid_HiPoly_MeshPart13
+    4300030: Vapire_Squid_HiPoly_MeshPart14
+    4300032: Vapire_Squid_HiPoly_MeshPart15
+    4300034: Vapire_Squid_HiPoly_MeshPart16
+    4300036: Vapire_Squid_HiPoly_MeshPart17
+    4300038: Vapire_Squid_HiPoly_MeshPart18
+    4300040: Vapire_Squid_HiPoly_MeshPart19
+    7400000: Default Take
+    7400002: PoseLib
+    7400004: Vampire_Squid_Drift_Down
+    7400006: Vampire_Squid_Fin_Flap
+    7400008: Vampire_Squid_Idle
+    7400010: Vampire_Squid_Squirt
+    7400012: Vampire_Squid_Swim_Backward
+    7400014: Vampire_Squid_Swim_Forward
+    7400016: Vampire_Squid_Swim_Left
+    7400018: Vampire_Squid_Swim_Right
+    7400020: Vampire_Squid_Swim_Up
+    7400022: Vampire_Squid_TentacleCollapse
+    9500000: //RootNode
+    13700000: Vampire_Squid_Model
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PoseLib
+      takeName: PoseLib
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Drift_Down
+      takeName: Vampire_Squid_Drift_Down
+      firstFrame: 0
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Fin_Flap
+      takeName: Vampire_Squid_Fin_Flap
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Idle
+      takeName: Vampire_Squid_Idle
+      firstFrame: 0
+      lastFrame: 225
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Squirt
+      takeName: Vampire_Squid_Squirt
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Swim_Backward
+      takeName: Vampire_Squid_Swim_Backward
+      firstFrame: 0
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Swim_Forward
+      takeName: Vampire_Squid_Swim_Forward
+      firstFrame: 0
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Swim_Left
+      takeName: Vampire_Squid_Swim_Left
+      firstFrame: 0
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Swim_Right
+      takeName: Vampire_Squid_Swim_Right
+      firstFrame: 0
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Vampire_Squid_Swim_Up
+      takeName: Vampire_Squid_Swim_Up
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Root
+        weight: 1
+      - path: Rig/Root/Mantle
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Collapse
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/CTRL_Tentacle_Mid/CTRL_Tentacle_Lower
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_A_1/Tentacle_A_2/Tentacle_A_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_B_1/Tentacle_B_2/Tentacle_B_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_C_1/Tentacle_C_2/Tentacle_C_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_D_1/Tentacle_D_2/Tentacle_D_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_E_1/Tentacle_E_2/Tentacle_E_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_F_1/Tentacle_F_2/Tentacle_F_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_G_1/Tentacle_G_2/Tentacle_G_3
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2
+        weight: 1
+      - path: Rig/Root/Mantle/BodyMain/Tentacle_H_1/Tentacle_H_2/Tentacle_H_3
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_L/Fin_2_L
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R
+        weight: 1
+      - path: Rig/Root/Mantle/Fin_1_R/Fin_2_R
+        weight: 1
+      - path: Vampire_Squid_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: Root
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: bcd64934751f1b34e9475f1d6db04a28,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
