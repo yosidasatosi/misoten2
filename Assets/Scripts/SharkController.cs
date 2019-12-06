@@ -87,21 +87,21 @@ public class SharkController : MonoBehaviour
         }
 
         // 座標・回転データの初期化
-        data.startData[(int)MOVE_PATTERN.PATTERN01] = new Vector3(-160.0f, 0.0f, 20.0f);
-        data.startData[(int)MOVE_PATTERN.PATTERN02] = new Vector3(160.0f, 0.0f, 20.0f);
-        data.startData[(int)MOVE_PATTERN.PATTERN03] = new Vector3(-50.0f, 0.0f, 160.0f);
-        data.startData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(50.0f, 0.0f, 160.0f);
+        data.startData[(int)MOVE_PATTERN.PATTERN01] = new Vector3(210.0f, 0.0f, 20.0f);
+        data.startData[(int)MOVE_PATTERN.PATTERN02] = new Vector3(-180.0f, 0.0f, 20.0f);
+        data.startData[(int)MOVE_PATTERN.PATTERN03] = new Vector3(50.0f, 0.0f, 170.0f);
+        data.startData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(-50.0f, 0.0f, 170.0f);
         data.startData[(int)MOVE_PATTERN.PATTERN05] = new Vector3(0.0f, 50.0f, -80.0f);
 
-        data.endPosData[(int)MOVE_PATTERN.PATTERN01] = new Vector3(150.0f, 0.0f, 20.0f);
-        data.endPosData[(int)MOVE_PATTERN.PATTERN02] = new Vector3(-150.0f, 0.0f, 20.0f);
-        data.endPosData[(int)MOVE_PATTERN.PATTERN03] = new Vector3(80.0f, 0.0f, -80.0f);
-        data.endPosData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(-80.0f, 00.0f, -80.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN01] = new Vector3(-170.0f, 0.0f, 20.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN02] = new Vector3(150.0f, 0.0f, 20.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN03] = new Vector3(-70.0f, 00.0f, -80.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(70.0f, 0.0f, -80.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN05] = new Vector3(0.0f, 0.0f, -25.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN06] = new Vector3(0.0f, 0.0f, -7.0f);
 
-        data.rotData[(int)MOVE_PATTERN.PATTERN01] = Quaternion.Euler(0.0f, 90.0f, 0.0f);
-        data.rotData[(int)MOVE_PATTERN.PATTERN02] = Quaternion.Euler(0.0f, 270.0f, 0.0f);
+        data.rotData[(int)MOVE_PATTERN.PATTERN01] = Quaternion.Euler(0.0f, 270.0f, 0.0f);
+        data.rotData[(int)MOVE_PATTERN.PATTERN02] = Quaternion.Euler(0.0f, 90.0f, 0.0f);
         data.rotData[(int)MOVE_PATTERN.PATTERN03] = Quaternion.Euler(0.0f, 180.0f, 0.0f);
         data.rotData[(int)MOVE_PATTERN.PATTERN04] = Quaternion.Euler(0.0f, 180.0f, 0.0f);
         data.rotData[(int)MOVE_PATTERN.PATTERN05] = Quaternion.Euler(0.0f, 0.0f, 0.0f);

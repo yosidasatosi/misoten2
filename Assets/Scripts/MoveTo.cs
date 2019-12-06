@@ -40,7 +40,7 @@ public class MoveTo : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private const int patternMax = (int)MOVE_PATTERN.PATTERN_MAX;   // パターンの最大番号
     private float moveTime = 0.5f;
-    private const float interval = 7.0f;
+    private const float interval = 8.0f;
     private float startTime;
     private int time;
 
@@ -74,6 +74,7 @@ public class MoveTo : MonoBehaviour
 
         if (flag)
         {
+            player.GetComponent<Collider>().enabled = false;
             // 終点の更新
             data.endPos = data.endPosData[patternState] + mainCamera.transform.position;
             data.endPos.z = data.endPosData[patternState].z + data.startData.z + mainCamera.transform.position.z;
@@ -96,6 +97,7 @@ public class MoveTo : MonoBehaviour
             patternState = nextState;
             nextState++;
 
+            player.GetComponent<Collider>().enabled = true;
             startTime = Time.realtimeSinceStartup;
         }
 
@@ -123,7 +125,7 @@ public class MoveTo : MonoBehaviour
     {
         if (data.endPosData[patternState] == new Vector3(0.0f, 0.0f, 0.0f)) return;
 
-        if (time == 120) moveOn = false;
+        if (time == 150) moveOn = false;
 
         if (!moveOn)
         {
