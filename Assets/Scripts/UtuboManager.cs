@@ -9,52 +9,52 @@ public class UtuboManager : MonoBehaviour
     // 構造体を編集可能にする
     [System.Serializable]
 
-    // 構造体
-    public class InitData
+    // パラメーター
+    public struct Parameter
     {
-        public GameObject utubomodel;
-        public float StartSpeed;
-        public float MoveTime;
-        public float Timing;
-        //public int StartSpeed;
-        //public int EndSpeed;
+        public float Start;
+        public float Back;
     }
 
-    //public class Speed
-    //{
-    //    public int Start;
-    //    public int End;
-    //}
+    // 構造体を編集可能にする
+    [System.Serializable]
 
+    // 初期値構造体
+    public struct InitData
+    {
+        public GameObject utubomodel;
+        public float Timing;
+        public Parameter Speed;
+        public Parameter MoveTime;
+    }
+
+    // 初期データ
     public List<InitData> InitDatas = new List<InitData>();
-    //public Speed speed = new Speed();
 
-    private int no;
+    // 参照用変数
+    private int No;
 
     // 生成用変数
-    private bool pop;
+    private bool Pop;
 
     // Start is called before the first frame update
     void Start()
     {
         // 初期値設定
-        no = -1;
+        No = 0;
 
-        pop = true;
-
-        //Debug.Log("ManagerStart");
+        // 生成用フラグ
+        Pop = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pop)
+        if(Pop)
         {
             //Debug.Log(Time.deltaTime);
             for (int i = 0; i < InitDatas.Count; i++)
             {
-                //Debug.Log("ManagerUpdate");
-
                 // プレファブからIwashiオブジェクトを生成
                 GameObject Utubo = (GameObject)Instantiate(
                     utuboPrefab               // 生成するプレファブ設定
@@ -66,37 +66,31 @@ public class UtuboManager : MonoBehaviour
             }
 
             // 生成終了
-            pop = false;
+            Pop = false;
         }
     }
-
-    // 移動速度取得関数
-    public float GetSpeed()
-    {
-        no++;
-        no %= InitDatas.Count;
-
-        return InitDatas[no].StartSpeed;
-    }
-
-    public float GetMoveTime()
-    {
-        return InitDatas[no].MoveTime;
-    }
-
-    public float GetTiming()
-    {
-        return InitDatas[no].Timing;
-    }
-
-    //public Speed GetSpeed()
-    //{
-    //    return speed;
-    //}
 
     // 初期値データ数取得関数
     public int GetCount()
     {
         return InitDatas.Count;
+    }
+
+    // 動作用データの設定
+    public void Set(ref float Sspd, ref float Bspd, ref float Stime, ref float Btime, ref float Timing)
+    {
+        // 移動速度
+        Sspd = InitDatas[No].Speed.Start;
+        Bspd = InitDatas[No].Speed.Back;
+
+        // 動作時間
+        Stime = InitDatas[No].MoveTime.Start;
+        Btime = InitDatas[No].MoveTime.Back;
+
+        // タイミング
+        Timing = InitDatas[No].Timing;
+
+        // 参照用変数更新
+        No++;
     }
 }

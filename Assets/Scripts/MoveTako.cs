@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTako : MonoBehaviour
 {
+    public bool Main;
+
     // TakoManagerスクリプト用変数
     private TakoManager takomanager;
     private GameObject gameobject;
@@ -34,14 +36,11 @@ public class MoveTako : MonoBehaviour
         // コンポーネント取得
         takomanager = gameobject.GetComponent<TakoManager>();
 
-        // 移動速度を保存
-        Speed = takomanager.GetSpeed();
+        // パラメータの設定
+        takomanager.SetTakoPar(Main, ref Speed, ref StopPos);
 
-        // 動作方法の保存
-        MoveMode = takomanager.GetMoveMode();
-
-        // 停止位置の保存
-        StopPos = takomanager.GetStopPos();
+        // 初期位置から進行方向を設定
+        SetMoveMode();
 
         // 墨を吐いている時間設定
         FireTime = 5.0f;
@@ -59,9 +58,6 @@ public class MoveTako : MonoBehaviour
         Fire = false;
         Stop = false;
         ReStart = false;
-
-        // 移動方向設定
-        SetSpeed();
     }
 
     // Update is called once per frame
@@ -130,5 +126,21 @@ public class MoveTako : MonoBehaviour
         {
             Speed *= -1;
         }
+    }
+
+    // 動作方法設定関数
+    void SetMoveMode()
+    {
+        if (transform.localPosition.y > StopPos)
+        { // 停止位置より上が初期位置の時
+            MoveMode = 0;
+        }
+        else if (transform.localPosition.y < StopPos)
+        { // 停止位置より下が初期位置の時
+            MoveMode = 1;
+        }
+
+        // 動作方法から移動方向の設定
+        SetSpeed();
     }
 }

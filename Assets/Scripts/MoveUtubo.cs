@@ -4,34 +4,21 @@ using UnityEngine;
 
 public class MoveUtubo : MonoBehaviour
 {
+    public float Wait;
+
     private UtuboManager utubomanager;
     private GameObject gameobject;
     private GameObject CamObj;
 
-    private float a = 0;
+    private int MoveNo;
 
-    private Vector3 InitPosition;
-    private float Speed;
-    private float MoveTime;
-
-    private float count;
+    private float[] Speed = new float[2];
+    private float[] MoveTime = new float[2];
+    private float Timing;
+    private float Count;
 
     // 動作用変数
     private bool Move;
-
-    // 動作タイミング変数
-    public float Timing = 7.0f;
-
-    // 定数定義
-    //public const float MOVE_TIMING = 7.0f;
-
-    //private class Speed
-    //{
-    //    float Start;
-    //    float End;
-    //}
-
-    //private Speed speed = new Speed();
 
     // Start is called before the first frame update
     void Start()
@@ -42,63 +29,70 @@ public class MoveUtubo : MonoBehaviour
         // コンポーネント取得
         utubomanager = gameobject.GetComponent<UtuboManager>();
 
-        // 初期位置を保存
-        InitPosition = transform.localPosition;
+        // 動作用変数の初期化
+        MoveNo = 0;
 
-        //Debug.Log(InitPosition);
-
-        // 移動速度を保存
-        Speed = utubomanager.GetSpeed();
-
-        MoveTime = utubomanager.GetMoveTime();
-
-        Timing = utubomanager.GetTiming();
+        // データの設定
+        utubomanager.Set(ref Speed[0], ref Speed[1], ref MoveTime[0], ref MoveTime[1], ref Timing);
 
         // メインカメラコンポーネントの取得
         CamObj = Camera.main.gameObject;
 
         // 初期値設定
         Move = false;
+
+        Speed[1] *= -1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(CamObj.transform.position);
-
-        if (Move)
+        if (MoveNo < 2)
         {
-            //a = InitPosition.x - transform.position.x;
-            //if (a < 0)
-            //{
-            //    a *= -1;
-            //}
-
-            if (count < MoveTime)
+            if (Move)
             {
-                // 前方向に移動
-                transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
+                if (Count < MoveTime[MoveNo])
+                {
+                    // 前方向に移動
+                    transform.Translate(0.0f, 0.0f, Speed[MoveNo] * Time.deltaTime, Space.Self);
+                }
+                else
+                {
+                    Move = false;
+                    Count = 0.0f;
+                    MoveNo++;
+                }
 
-                count += Time.deltaTime;
+                UpdateCount();
             }
             else
             {
-
+                if (CamObj.transform.position.z + Timing > transform.position.z)
+                {
+                    if (MoveNo == 0)
+                    {
+                        // 動作開始
+                        Move = true;
+                    }
+                    else
+                    {
+                        if (Count < Wait)
+                        {
+                            UpdateCount();
+                        }
+                        else
+                        {
+                            Count = 0.0f;
+                            Move = true;
+                        }
+                    }
+                }
             }
-            //else
-            //{
-            //    count = 0.0f;
-            //}
         }
-        else
-        {
-            if (CamObj.transform.position.z + Timing > transform.position.z)
-            {
-                // 動作開始
-                Move = true;
+    }
 
-                //Debug.Log("pop true");
-            }
-        }
+    void UpdateCount()
+    {
+        Count += Time.deltaTime;
     }
 }

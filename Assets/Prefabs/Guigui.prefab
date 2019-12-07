@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfdd6e3c01fa914a9ef7dbed30bd0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timing: 50
+  Wait: 0.5
 --- !u!65 &6404884724801855493
 BoxCollider:
   m_ObjectHideFlags: 0
