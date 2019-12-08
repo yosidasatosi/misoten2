@@ -26,8 +26,8 @@ public class Ankoulight : MonoBehaviour
         timer += Time.deltaTime;
 
         float progress = Mathf.Min(timer / (IsGrowing ? GrowingTime : ShrinkTime), 1.0f);
-        float startScale = IsGrowing ? StartScale : 1.0f;
-        float endScale = IsGrowing ? 1.0f : 0.0f;
+        float startScale = IsGrowing ? StartScale : 2.0f;
+        float endScale = IsGrowing ? 2.0f : 0.0f;
 
         transform.localScale = Vector3.one * Mathf.Lerp(startScale, endScale, progress);
         
@@ -51,7 +51,7 @@ public class Ankoulight : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(gameObject);
-            Instantiate(Ankou, transform.position, transform.rotation, transform.parent);
+            Instantiate(Ankou, transform.position, transform.rotation, transform.parent );
         }
     }
 }
