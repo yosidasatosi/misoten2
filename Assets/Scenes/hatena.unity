@@ -2882,8 +2882,7 @@ PrefabInstance:
       propertyPath: InitAnimSpeed
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8437260064581925352, guid: d768b4467d66b0d4ba62bbf72c6d7ea1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d768b4467d66b0d4ba62bbf72c6d7ea1, type: 3}
 --- !u!1001 &1226335586
 PrefabInstance:
@@ -3694,7 +3693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextSceneName: 
   StageNameAnim: {fileID: 90510736}
-  TransitionTime: 40
+  TransitionTime: 50
 --- !u!4 &1464398616
 Transform:
   m_ObjectHideFlags: 0
@@ -4075,15 +4074,14 @@ PrefabInstance:
     - target: {fileID: 7895423658172984496, guid: 0ec8ee763be3313429614ac87bab5809,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7895423658172984496, guid: 0ec8ee763be3313429614ac87bab5809,
         type: 3}
       propertyPath: InitAnimSpeed
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7895423658172984496, guid: 0ec8ee763be3313429614ac87bab5809, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec8ee763be3313429614ac87bab5809, type: 3}
 --- !u!1 &1652006172
 GameObject:

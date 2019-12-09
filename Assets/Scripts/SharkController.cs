@@ -22,6 +22,7 @@ public class SharkController : MonoBehaviour
         PATTERN04,  // 前方から右後方へ
         PATTERN05,  // 後ろから追う
         PATTERN06,
+        PATTERN07,
         PATTERN_MAX
     }
 
@@ -40,7 +41,6 @@ public class SharkController : MonoBehaviour
     public GameObject[] shark;
     public GameObject button;
     public Camera mainCamera;
-
     private int modelState;
     // パターン関係データ
     public MoveData data;         // 動きのデータ
@@ -53,11 +53,12 @@ public class SharkController : MonoBehaviour
     private bool atcFlag;
     private bool changeState;
     public int changeMove;          // moveの関数変更開始パターン
+    private int atcCnt;
     // 定数データ
     private Vector3 velocity = Vector3.zero;
     private const int patternMax = (int)MOVE_PATTERN.PATTERN_MAX;   // パターンの最大番号
     private float moveTime = 3.0f;
-    private const float interval = 7.0f;
+    private float interval = 7.0f;
     private const float changeTime = 1.0f;
     private float startTime;
     private const int modelMax = (int)MODEL.MODEL_MAX;
@@ -72,7 +73,6 @@ public class SharkController : MonoBehaviour
         data.endPosData = new Vector3[patternMax];
         data.rotData = new Quaternion[patternMax];
         anim = shark[1].GetComponent<Animator>();
-
         // インスタンスの初期化
         modelState = (int)MODEL.MODEL01;
         shark[(int)MODEL.MODEL02].SetActive(false);
@@ -99,6 +99,7 @@ public class SharkController : MonoBehaviour
         data.endPosData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(70.0f, 0.0f, -80.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN05] = new Vector3(0.0f, 0.0f, -25.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN06] = new Vector3(0.0f, 0.0f, -7.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN07] = new Vector3(0.0f, 0.0f, -300.0f);
 
         data.rotData[(int)MOVE_PATTERN.PATTERN01] = Quaternion.Euler(0.0f, 270.0f, 0.0f);
         data.rotData[(int)MOVE_PATTERN.PATTERN02] = Quaternion.Euler(0.0f, 90.0f, 0.0f);
@@ -123,29 +124,19 @@ public class SharkController : MonoBehaviour
 
         if (!changeState)
         {
-            if(patternState > (int)MOVE_PATTERN.PATTERN02 && (int)nowTime == 1.0f)
+            if (patternState > (int)MOVE_PATTERN.PATTERN02)
             {
-                anim.Play("CINEMA_4D___ 0", 0, 0.0f);
+                if (patternState <= (int)MOVE_PATTERN.PATTERN04 && (int)nowTime == 1.0f)
+                {
+                    anim.Play("CINEMA_4D___ 0", 0, 0.0f);
+                }
             }
-
-            //if (patternState > (int)MOVE_PATTERN.PATTERN02 && (int)nowTime == 1.0f)
-            //{
-            //    Vector3 tempPos = shark[modelState].transform.position;
-            //    // パターン３からモデル変更
-            //    shark[modelState].SetActive(false);
-            //    modelState++;
-            //    shark[modelState].SetActive(true);
-            //    // 位置の設定
-            //    shark[modelState].transform.SetPositionAndRotation(tempPos, data.rotData[patternState]);
-            //}
-
-            // 状態遷移時間の確認
-            CheckPattern(nowTime);
             // 移動処理
             FirstMove();
         }
         else if (changeState)
         {
+            // ボタンが非表示になった時に動作開始
             if (button.activeSelf == false)
             {
                 data.startPos = data.endPosData[(int)MOVE_PATTERN.PATTERN05] + mainCamera.transform.position;
@@ -156,6 +147,9 @@ public class SharkController : MonoBehaviour
                 atcTime = 0;
             }
         }
+
+        // 状態遷移時間の確認
+        CheckPattern(nowTime);
     }
 
     //=====================================================
@@ -177,7 +171,7 @@ public class SharkController : MonoBehaviour
     //=====================================================
     void ChangeState()
     {
-        if (patternState != patternMax)
+        if (patternState < (int)MOVE_PATTERN.PATTERN05)
         {   // ステートの変更
             patternState = nextState;
             nextState++;
@@ -185,27 +179,37 @@ public class SharkController : MonoBehaviour
             // モデルの変更
             ChangeModel();
 
-            // パターン３からモデル変更
-            //if (patternState > (int)MOVE_PATTERN.PATTERN04)
-            //{
-            //    shark[modelState].SetActive(false);
-            //    modelState--;
-            //    shark[modelState].SetActive(true);
-            //}
-
             // 位置の設定
             shark[modelState].transform.SetPositionAndRotation(mainCamera.transform.position + data.startData[patternState],
                                                                                     data.rotData[patternState]);
-            startTime = Time.realtimeSinceStartup;
         }
 
-        //　 
-        if(patternState == changeMove)
+
+        if(patternState == (int)MOVE_PATTERN.PATTERN06)
+        {
+            atcCnt++;
+
+            if (atcCnt >= 3)
+            {
+                patternState = (int)MOVE_PATTERN.PATTERN07;
+                changeState = false;
+                moveTime = 5.0f;
+                atcCnt = 0;
+                anim.speed = 0.5f;
+
+                return;
+            }
+        }
+
+        if (patternState == changeMove)
         {
             patternState = nextState;
             changeState = true;
             moveTime = 1.0f;
+            interval = 12.0f;
         }
+
+        startTime = Time.realtimeSinceStartup;
     }
 
     //====================================================
@@ -213,6 +217,7 @@ public class SharkController : MonoBehaviour
     //====================================================
     void CheckPattern(float nowTime)
     {
+        // パターン４までスローモーション判定
         if (patternState <= (int)MOVE_PATTERN.PATTERN04)
         {   
             // スローモーションのチェック
@@ -249,11 +254,6 @@ public class SharkController : MonoBehaviour
         }
         else
         {
-            //if (atcTime == 10)
-            //{
-            //    anim.Play("CINEMA_4D___ 0", 0, 0.0f);
-            //}
-
             // 移動
             shark[modelState].transform.position =
                 Vector3.SmoothDamp(shark[modelState].transform.position, data.endPos, ref velocity, moveTime);
