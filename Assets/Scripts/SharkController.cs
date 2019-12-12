@@ -98,7 +98,7 @@ public class SharkController : MonoBehaviour
         data.endPosData[(int)MOVE_PATTERN.PATTERN03] = new Vector3(-70.0f, 00.0f, -80.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN04] = new Vector3(70.0f, 0.0f, -80.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN05] = new Vector3(0.0f, 0.0f, -25.0f);
-        data.endPosData[(int)MOVE_PATTERN.PATTERN06] = new Vector3(0.0f, 0.0f, -7.0f);
+        data.endPosData[(int)MOVE_PATTERN.PATTERN06] = new Vector3(0.0f, 0.0f, -5.0f);
         data.endPosData[(int)MOVE_PATTERN.PATTERN07] = new Vector3(0.0f, 0.0f, -300.0f);
 
         data.rotData[(int)MOVE_PATTERN.PATTERN01] = Quaternion.Euler(0.0f, 270.0f, 0.0f);
@@ -195,7 +195,7 @@ public class SharkController : MonoBehaviour
                 changeState = false;
                 moveTime = 5.0f;
                 atcCnt = 0;
-                anim.speed = 0.5f;
+                anim.speed = 0.7f;
 
                 return;
             }
