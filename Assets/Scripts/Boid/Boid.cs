@@ -20,6 +20,8 @@ public class Boid : MonoBehaviour
     //角度
     private Quaternion angle;
 
+    private bool wallSet = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +39,20 @@ public class Boid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            wallSet = false;
+            accel = Vector3.zero;
+        }
+
         //近隣個体を探してneighborsリスト更新
         UpdateNeighbors();
 
         //壁に当たりそうになったら向きを変える
-        UpdateWalls();
+        if (wallSet)
+        {
+            UpdateWalls();
+        }
 
         //近隣の個体から離れる
         UpdateSeparation();

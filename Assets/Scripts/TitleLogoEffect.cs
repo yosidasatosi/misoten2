@@ -9,6 +9,10 @@ public class TitleLogoEffect : MonoBehaviour
     [SerializeField]
     private ParticleSystem particle;
 
+    //bubble
+    private GameObject bubble;
+    //camera
+    private GameObject camera;
 
 
     
@@ -16,8 +20,10 @@ public class TitleLogoEffect : MonoBehaviour
     void Start()
     {
         logoSprite = GetComponent<SpriteRenderer>();
+        bubble = GameObject.Find("Bubble");
+        camera = GameObject.Find("Camera");
         particle.Stop();
-
+        bubble.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,14 +35,22 @@ public class TitleLogoEffect : MonoBehaviour
 
     void GameStart()
     {
-        Color logoColor = logoSprite.color;
-        
-        if (logoColor.a>=1.0f&&Input.GetKeyDown(KeyCode.Space))
+        Vector3 cameraPos = camera.transform.position;
+
+        if (cameraPos.z >= -5.3f && Input.GetKeyDown(KeyCode.Space))
         {
-            logoSprite.enabled = false;
+            logoSprite.enabled = false;    
             particle.Play();
         }
 
+        if (cameraPos.z >= -20f)
+        {
+            bubble.SetActive(true);
+        }
+
     }
+
+
+
 
 }

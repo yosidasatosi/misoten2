@@ -457,8 +457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5440502845337277524}
   - component: {fileID: 378811883049460292}
-  - component: {fileID: 1607310951494716963}
-  - component: {fileID: 4393495597159612783}
   m_Layer: 0
   m_Name: Mackerel_prefab Variant
   m_TagString: Untagged
@@ -501,32 +499,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1607310951494716963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7038829974843841296}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c92c038515242d28f997db276ea56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4393495597159612783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7038829974843841296}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cddac8d10b614c5caecdb8117a4e1dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMove: {fileID: 0}
-  speed: 0
 --- !u!1 &7142850664276527229
 GameObject:
   m_ObjectHideFlags: 0
