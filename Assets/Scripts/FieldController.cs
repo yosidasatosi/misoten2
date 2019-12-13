@@ -64,7 +64,7 @@ public class FieldController : MonoBehaviour
     {
         if(index < FieldList.Count)
         {
-            FieldList[index].transform.Translate(0.0f, 0.0f, 2.0f * FieldDistance);
+            FieldList[index].transform.Translate(0.0f, 0.0f, 1.5f * FieldDistance);
         }
     }
 

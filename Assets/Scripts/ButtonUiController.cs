@@ -90,4 +90,9 @@ public class ButtonUiController : MonoBehaviour
             inputOffPlayer[3].GetComponent<ButtonController>().enabled = true;
         }
     }
+
+    public int GetDrwaCnt()
+    {
+        return drawCnt;
+    }
 }
