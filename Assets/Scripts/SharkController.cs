@@ -206,7 +206,7 @@ public class SharkController : MonoBehaviour
             patternState = nextState;
             changeState = true;
             moveTime = 1.0f;
-            interval = 12.0f;
+            interval = 11.0f;
         }
 
         startTime = Time.realtimeSinceStartup;

@@ -26,7 +26,6 @@ public class MoveTo : MonoBehaviour
     };
 
     // オブジェクト
-    public GameObject player;
     public Camera mainCamera;
     // パターン関係データ
     public MoveData data;         // 動きのデータ
@@ -35,12 +34,11 @@ public class MoveTo : MonoBehaviour
     private int nextState;        // 次のパターン番号
     public bool flag;
     public bool moveOn;
-    public ButtonController button;
     // 定数データ
     private Vector3 velocity = Vector3.zero;
     private const int patternMax = (int)MOVE_PATTERN.PATTERN_MAX;   // パターンの最大番号
     private float moveTime = 0.5f;
-    private const float interval = 8.0f;
+    private float interval = 7.0f;
     private float startTime;
     private int time;
 
@@ -49,7 +47,6 @@ public class MoveTo : MonoBehaviour
     {
         // インスタンスの生成
         movePattern = new int[patternMax];
-        button = GetComponent<ButtonController>();
         // インスタンスの初期化
         startTime = Time.realtimeSinceStartup;
         nextState = (int)MOVE_PATTERN.PATTERN02;
@@ -62,8 +59,8 @@ public class MoveTo : MonoBehaviour
         }
 
         // 座標データの初期化
-        data.startData = player.transform.localPosition;
-        data.startPos = player.transform.position;
+        data.startData = transform.localPosition;
+        data.startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -74,7 +71,7 @@ public class MoveTo : MonoBehaviour
 
         if (flag)
         {
-            player.GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().enabled = false;
             // 終点の更新
             data.endPos = data.endPosData[patternState] + mainCamera.transform.position;
             data.endPos.z = data.endPosData[patternState].z + data.startData.z + mainCamera.transform.position.z;
@@ -96,15 +93,17 @@ public class MoveTo : MonoBehaviour
         {   // ステートの変更
             patternState = nextState;
             nextState++;
-
-            player.GetComponent<Collider>().enabled = true;
-            startTime = Time.realtimeSinceStartup;
         }
 
         if(patternState == (int)MOVE_PATTERN.PATTERN05)
         {
-            button.ButtonMode = true;
+            GetComponent<ButtonController>().ButtonMode = true;
+            interval = 11.0f;
         }
+
+        GetComponent<Collider>().enabled = true;
+        startTime = Time.realtimeSinceStartup;
+        flag = false;
     }
 
     //====================================================
@@ -112,7 +111,7 @@ public class MoveTo : MonoBehaviour
     //====================================================
     void CheckPattern(float nowTime)
     {
-        if ((int)nowTime == interval)
+        if ((int)nowTime >= interval)
         {
             ChangeState();
         }
@@ -130,15 +129,15 @@ public class MoveTo : MonoBehaviour
         if (!moveOn)
         {
             // 移動
-            player.transform.position =
-                Vector3.SmoothDamp(player.transform.position, data.startPos, ref velocity, moveTime);
+            transform.position =
+                Vector3.SmoothDamp(transform.position, data.startPos, ref velocity, moveTime);
             time = 0;
         }
         else
         {
             // 移動
-            player.transform.position =
-                Vector3.SmoothDamp(player.transform.position, data.endPos, ref velocity, moveTime);
+            transform.position =
+                Vector3.SmoothDamp(transform.position, data.endPos, ref velocity, moveTime);
             time++;
         }
 
