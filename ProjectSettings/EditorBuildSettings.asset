@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/hatena.unity
     guid: d09353688f4561f4c8ab5e5f217874a9
   - enabled: 1
-    path: Assets/Scenes/result.unity
+    path: Assets/Scenes/Result.unity
     guid: 573fcef729a920c4db4477ccae34cf62
   m_configObjects: {}
