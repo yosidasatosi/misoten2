@@ -20,7 +20,7 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(rotStart)
+        if(rotStart)
         {
             transform.RotateAround(titleLogo.transform.position, Vector3.up, rotAngle * Time.deltaTime);
         }
@@ -34,7 +34,7 @@ public class CameraRotation : MonoBehaviour
 
     public void CameraRot()
     {
-        animator.SetBool("AnimationStop", true);
+        //animator.SetBool("AnimationStop", true);
         rotStart = true;
     }
 }
