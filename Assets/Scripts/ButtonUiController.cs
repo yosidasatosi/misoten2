@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //=========================================================
 // ボタンUIの管理クラス
 //=========================================================
 public class ButtonUiController : MonoBehaviour
 {
-    private enum BUTTON_MODE
-    {
-        MODE01,
-        MODE02,
-        MODE_MAX
-    }
-
     public GameObject Button;
     public GameObject[] inputOffPlayer;
     public int[] start;
@@ -32,10 +26,6 @@ public class ButtonUiController : MonoBehaviour
         startTime = Time.realtimeSinceStartup;
         changeTime = end[0] + interval[0];
         Button.SetActive(false);
-        inputOffPlayer[0].GetComponent<ButtonController>().enabled = false;
-        inputOffPlayer[1].GetComponent<ButtonController>().enabled = false;
-        inputOffPlayer[2].GetComponent<ButtonController>().enabled = false;
-        inputOffPlayer[3].GetComponent<ButtonController>().enabled = false;
     }
 
     // Update is called once per frame
@@ -53,10 +43,17 @@ public class ButtonUiController : MonoBehaviour
     {
         if (drawCnt >= patternCnt[pattern])
         {
-            pattern++;
-            drawCnt = 0;
-            startTime = Time.realtimeSinceStartup;
-            changeTime = end[pattern] + interval[pattern];
+            if (pattern != (patternCnt.Length -1))
+            {
+                pattern++;
+                drawCnt = 0;
+                startTime = Time.realtimeSinceStartup;
+                changeTime = end[pattern] + interval[pattern];
+            }
+            else
+            {
+                this.enabled = false;
+            }
         }
     }
 
@@ -68,31 +65,14 @@ public class ButtonUiController : MonoBehaviour
         {
             drawCnt++;
             startTime = Time.realtimeSinceStartup;
-            inputOffPlayer[0].GetComponent<MoveTo>().flag = false;
-            inputOffPlayer[1].GetComponent<MoveTo>().flag = false;
-            inputOffPlayer[2].GetComponent<MoveTo>().flag = false;
-            inputOffPlayer[3].GetComponent<MoveTo>().flag = false;
         }
         else if ((int)nowTime >= end[pattern])
         {
             Button.SetActive(false);
-            inputOffPlayer[0].GetComponent<ButtonController>().enabled = false;
-            inputOffPlayer[1].GetComponent<ButtonController>().enabled = false;
-            inputOffPlayer[2].GetComponent<ButtonController>().enabled = false;
-            inputOffPlayer[3].GetComponent<ButtonController>().enabled = false;
         }
         else if ((int)nowTime >= start[pattern])
         {
             Button.SetActive(true);
-            inputOffPlayer[0].GetComponent<ButtonController>().enabled = true;
-            inputOffPlayer[1].GetComponent<ButtonController>().enabled = true;
-            inputOffPlayer[2].GetComponent<ButtonController>().enabled = true;
-            inputOffPlayer[3].GetComponent<ButtonController>().enabled = true;
         }
-    }
-
-    public int GetDrwaCnt()
-    {
-        return drawCnt;
     }
 }

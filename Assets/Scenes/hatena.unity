@@ -1794,8 +1794,8 @@ MonoBehaviour:
   - {fileID: 1544620470}
   - {fileID: 806326373}
   start: 0200000003000000
-  end: 0300000008000000
-  interval: 0400000004000000
+  end: 0300000007000000
+  interval: 0400000002000000
   patternCnt: 0400000003000000
 --- !u!1001 &529975399
 PrefabInstance:
@@ -2466,6 +2466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNo: 4
+  buttonUI: {fileID: 1320412825}
   pushCnt: 0
   pushMaxCnt: 30
   ButtonMode: 0
@@ -2497,7 +2498,6 @@ MonoBehaviour:
   patternState: 0
   flag: 0
   moveOn: 0
-  button: {fileID: 0}
 --- !u!1 &882785701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3127968383906296626, guid: b8583c51d042037429a178f8ac4ad576,
@@ -3134,7 +3134,6 @@ MonoBehaviour:
   patternState: 0
   flag: 0
   moveOn: 0
-  button: {fileID: 0}
 --- !u!114 &1129390752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,6 +3147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNo: 2
+  buttonUI: {fileID: 1320412825}
   pushCnt: 0
   pushMaxCnt: 30
   ButtonMode: 0
@@ -3756,6 +3756,11 @@ PrefabInstance:
     - target: {fileID: 784249619, guid: 0b78b448c2a1aad4eb60ed57c18f23bc, type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018561028011505517, guid: 0b78b448c2a1aad4eb60ed57c18f23bc,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b78b448c2a1aad4eb60ed57c18f23bc, type: 3}
@@ -4859,6 +4864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNo: 3
+  buttonUI: {fileID: 1320412825}
   pushCnt: 0
   pushMaxCnt: 30
   ButtonMode: 0
@@ -4890,7 +4896,6 @@ MonoBehaviour:
   patternState: 0
   flag: 0
   moveOn: 0
-  button: {fileID: 0}
 --- !u!1001 &1577209780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5445,8 +5450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNo: 1
+  buttonUI: {fileID: 1320412825}
   pushCnt: 0
-  pushMaxCnt: 30
+  pushMaxCnt: 20
   ButtonMode: 0
 --- !u!114 &1677496159
 MonoBehaviour:
@@ -5476,7 +5482,6 @@ MonoBehaviour:
   patternState: 0
   flag: 0
   moveOn: 0
-  button: {fileID: 0}
 --- !u!1001 &1696067784
 PrefabInstance:
   m_ObjectHideFlags: 0
