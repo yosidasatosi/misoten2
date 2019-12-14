@@ -7,7 +7,7 @@ public class PlayerBase : MonoBehaviour
     public int InitHP = 100;
     public UIHP HPUI;
 
-    public int HP { get; private set; }
+    public  int HP { get; private set; }
     public int PlayerNo { get; private set; }
 
     private DamageFlash MyDamageFlash;
@@ -23,7 +23,7 @@ public class PlayerBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void Damage(int damagePoint)
@@ -43,4 +43,5 @@ public class PlayerBase : MonoBehaviour
             HPUI.SetPercent(HP / (float)InitHP);
         }
     }
+
 }

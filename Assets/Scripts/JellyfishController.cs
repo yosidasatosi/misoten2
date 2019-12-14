@@ -32,6 +32,7 @@ public class JellyfishController : MonoBehaviour
             if(ParticleStop)
             {
                 Destroy(Particle);
+
             }
             else
             {
@@ -41,6 +42,7 @@ public class JellyfishController : MonoBehaviour
             if(MyCollider != null)
             {
                 MyCollider.enabled = !ParticleStop;
+
             }
             Timer = 0.0f;
         }

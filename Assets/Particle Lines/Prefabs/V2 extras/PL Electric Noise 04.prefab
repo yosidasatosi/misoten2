@@ -52,8 +52,8 @@ MonoBehaviour:
   _sortParticleOnLife: 1
   _sortParticleOnDistance: 0
   _freezeZeroParticle: 1
-  startColor: {r: 0.42517975, g: 0.80613905, b: 1, a: 0.58838093}
-  endColor: {r: 0.25409836, g: 0.87691367, b: 1, a: 0.55545235}
+  startColor: {r: 0.4295556, g: 0.8076148, b: 1, a: 0.8364068}
+  endColor: {r: 0.2674584, g: 0.879102, b: 1, a: 0.5915625}
   _gradients: 1
   _gradientStart:
     serializedVersion: 2
@@ -206,7 +206,7 @@ MonoBehaviour:
   _sortInterval: 0
   _cutEndSegments: 5
   _lineResolution: 150
-  _currentResolution: 73
+  _currentResolution: 75
   sorted: 11
   lineMaterial: {fileID: 2100000, guid: 6fc8b0f800da1cc4dbb835f17558b9de, type: 2}
   cacheMeshRenderer: {fileID: 23627103736515394}
@@ -5109,7 +5109,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
+  m_Intensity: 0.45
   m_Range: 12.42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

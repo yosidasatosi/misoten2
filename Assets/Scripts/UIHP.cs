@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class UIHP : MonoBehaviour
 {
+    
     private Slider MySlider;
     private void Start()
     {
+        
+
         MySlider = GetComponent<Slider>();
     }
 
