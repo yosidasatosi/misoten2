@@ -6,6 +6,10 @@ public class TitleLogoEffect : MonoBehaviour
 {
     SpriteRenderer logoSprite;
 
+    //cameraScript
+    public  CameraRotation cameraRot;
+    private bool CameraRot;
+
     [SerializeField]
     private ParticleSystem particle;
 
@@ -19,6 +23,7 @@ public class TitleLogoEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CameraRot = cameraRot.GetRotStart();
         logoSprite = GetComponent<SpriteRenderer>();
         bubble = GameObject.Find("Bubble");
         camera = GameObject.Find("Camera");
@@ -37,18 +42,21 @@ public class TitleLogoEffect : MonoBehaviour
     {
         Vector3 cameraPos = camera.transform.position;
 
-        if (cameraPos.z >= -5.3f && Input.GetKeyDown(KeyCode.Space))
+        if (cameraPos.z > -5.3f && Input.GetKeyDown(KeyCode.Space))
         {
-            logoSprite.enabled = false;    
+            logoSprite.enabled = false;
             particle.Play();
         }
 
-        if (cameraPos.z >= -20f)
+        if (cameraPos.z > -5.3f)
         {
+            //CameraRot = true;
             bubble.SetActive(true);
         }
 
     }
+
+
 
 
 

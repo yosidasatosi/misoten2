@@ -97,9 +97,6 @@ public class Boid : MonoBehaviour
                  CalcAccelAgainstWall(scale.y - pos.y, Vector3.down) +
                  CalcAccelAgainstWall(scale.z - pos.z, Vector3.back);
 
-
-
-
     }
 
 

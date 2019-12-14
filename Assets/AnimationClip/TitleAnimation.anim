@@ -55,15 +55,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4.5
         value: {x: 0, y: 1, z: -10}
-        inSlope: {x: 0, y: 0, z: 3.237736}
-        outSlope: {x: 0, y: 0, z: 3.237736}
+        inSlope: {x: 0, y: -0.21509805, z: 2.9207563}
+        outSlope: {x: 0, y: -0.21509805, z: 2.9207563}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 7.0666666
-        value: {x: 0, y: 1, z: -4.28}
+        value: {x: 0, y: 0.62, z: -4.84}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -172,15 +172,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4.5
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.21509805
+        outSlope: -0.21509805
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 7.0666666
-        value: 1
+        value: 0.62
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -209,15 +209,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4.5
         value: -10
-        inSlope: 3.237736
-        outSlope: 3.237736
+        inSlope: 2.9207563
+        outSlope: 2.9207563
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 7.0666666
-        value: -4.28
+        value: -4.84
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -348,4 +348,11 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 7.05
+    functionName: CameraRot
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -12,8 +12,10 @@ public class MainSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        FadeInOut.Instance.FadeIn(1.0f,() => StageNameAnim?.Play());
+        if (StageNameAnim != null)
+        {
+            FadeInOut.Instance.FadeIn(1.0f, () => StageNameAnim?.Play());
+        }
     }
 
     // Update is called once per frame
