@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleLogoEffect : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class TitleLogoEffect : MonoBehaviour
         {
             logoSprite.enabled = false;
             particle.Play();
+            //SceneManager.LoadScene("asase");
         }
 
         if (cameraPos.z > -5.3f)
