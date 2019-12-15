@@ -16,8 +16,11 @@ public class TitleLogoEffect : MonoBehaviour
 
     //bubble
     private GameObject bubble;
-    //camera
-    private GameObject camera;
+
+    /// <summary>
+    /// titleAnimation終了時にtrue
+    /// </summary>
+    public bool cameraAnimStop = false;
 
 
     
@@ -27,7 +30,6 @@ public class TitleLogoEffect : MonoBehaviour
         CameraRot = cameraRot.GetRotStart();
         logoSprite = GetComponent<SpriteRenderer>();
         bubble = GameObject.Find("Bubble");
-        camera = GameObject.Find("Camera");
         particle.Stop();
         bubble.SetActive(false);
     }
@@ -41,16 +43,15 @@ public class TitleLogoEffect : MonoBehaviour
 
     void GameStart()
     {
-        Vector3 cameraPos = camera.transform.position;
 
-        if (cameraPos.z > -5.3f && Input.GetKeyDown(KeyCode.Space))
+        if (cameraAnimStop && Input.GetKeyDown(KeyCode.Space))
         {
             logoSprite.enabled = false;
             particle.Play();
             //SceneManager.LoadScene("asase");
         }
 
-        if (cameraPos.z > -5.3f)
+        if (cameraAnimStop)
         {
             //CameraRot = true;
             bubble.SetActive(true);
