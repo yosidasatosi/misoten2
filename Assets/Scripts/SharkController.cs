@@ -126,7 +126,11 @@ public class SharkController : MonoBehaviour
         {
             if (patternState > (int)MOVE_PATTERN.PATTERN02)
             {
-                if (patternState <= (int)MOVE_PATTERN.PATTERN04 && (int)nowTime == 1.0f)
+                if ((int)nowTime == 0.0f)
+                {
+                    anim.Rebind();
+                }
+                if ((int)nowTime == 1.0f)
                 {
                     anim.Play("CINEMA_4D___ 0", 0, 0.0f);
                 }
