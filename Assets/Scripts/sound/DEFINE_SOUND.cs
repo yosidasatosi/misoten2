@@ -31,7 +31,8 @@ public class DEFINE_SOUND {
         None,
         Title_BGM,
         Result_BGM,
-       
+        kaikoBGM,
+
     }
 
     // SEのラベル

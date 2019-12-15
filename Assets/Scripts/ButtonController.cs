@@ -12,7 +12,7 @@ public class ButtonController : MonoBehaviour
     public int pushMaxCnt = 0;
     public bool ButtonMode;
     private bool cheatFlag;
-    private bool trigger;
+    public bool trigger;
 
     // Start is called before the first frame update
     void Start()
@@ -58,9 +58,11 @@ public class ButtonController : MonoBehaviour
 
         if (pushCnt >= pushMaxCnt)
         {
-            //trigger = true;
+            trigger = true;
             GetComponent<MoveTo>().flag = true;
             GetComponent<MoveTo>().moveOn = true;
+            GetComponent<StarEffect>().use = true;
+
             pushCnt = 0;
         }
     }
@@ -72,9 +74,10 @@ public class ButtonController : MonoBehaviour
 
         if (pushCnt > 0)
         {
-            //trigger = true;
+            trigger = true;
             GetComponent<MoveTo>().flag = true;
             GetComponent<MoveTo>().moveOn = true;
+            GetComponent<StarEffect>().use = true;
             pushCnt = 0;
         }
     }

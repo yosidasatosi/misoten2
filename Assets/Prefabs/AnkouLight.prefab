@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e50c2feef80b543b13a2df5546a5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrowingTime: 2
-  ShrinkTime: 1
+  GrowingTime: 4
+  ShrinkTime: 2
   Ankou: {fileID: 100030, guid: 2b50495284bf5884fa42bfbed362f41d, type: 3}

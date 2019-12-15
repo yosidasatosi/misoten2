@@ -14,7 +14,7 @@ public class ResultSceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonDown("push1") || Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("TitleScene");
         }

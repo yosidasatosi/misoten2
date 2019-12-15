@@ -6,6 +6,7 @@ public class Ankoulight : MonoBehaviour
 {
     public float GrowingTime = 2.0f;
     public float ShrinkTime = 1.0f;
+    public float TriggerTime = 2.0f;
     public GameObject Ankou;
 
     private float StartScale;
@@ -41,17 +42,18 @@ public class Ankoulight : MonoBehaviour
             else
             {
                 Destroy(gameObject);
-
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player"
+            && IsGrowing
+            && timer >= (GrowingTime-TriggerTime))
         {
             Destroy(gameObject);
-            Instantiate(Ankou, transform.position, transform.rotation, transform.parent );
+            Instantiate(Ankou, transform.position, transform.rotation, transform.parent );            
         }
     }
 }
