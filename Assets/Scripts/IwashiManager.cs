@@ -31,7 +31,7 @@ public class IwashiManager : MonoBehaviour
     private float PopCount;
 
     private bool Parent;
-    private bool seisei;
+    private bool Pop;
 
     private bool Delete;
 
@@ -46,7 +46,7 @@ public class IwashiManager : MonoBehaviour
         ParentNo = 0;
 
         Parent = false;
-        seisei = false;
+        Pop = false;
         Delete = false;
 
         TargetRotation = Quaternion.identity;
@@ -57,33 +57,35 @@ public class IwashiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PopTime > PopCount)
+        if (!Delete)
         {
-            UpdateTimer();
-        }
-
-        if (!seisei)
-        {
-            //if (Input.GetButtonDown("Fire1"))
-            if (PopTime < PopCount)
+            if (!Pop)
             {
-                Quaternion Rot = Quaternion.identity;
-
-                //for (int i = 0; i < IwashiModel.Count; i++)
-                for (int i = 0; i < pop; i++)
+                //if (Input.GetButtonDown("Fire1"))
+                if (PopTime < PopCount)
                 {
-                    // プレファブからIwashiオブジェクトを生成
-                    Iwashi[i] = (GameObject)Instantiate(
-                        iwashiPrefab,               // 生成するプレファブ設定
-                        Camera.main.transform       // 親設定
-                        );
+                    Quaternion Rot = Quaternion.identity;
 
-                    // 初期位置設定
-                    Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
-                    Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
+                    //for (int i = 0; i < IwashiModel.Count; i++)
+                    for (int i = 0; i < pop; i++)
+                    {
+                        // プレファブからIwashiオブジェクトを生成
+                        Iwashi[i] = (GameObject)Instantiate(
+                            iwashiPrefab,               // 生成するプレファブ設定
+                            Camera.main.transform       // 親設定
+                            );
+
+                        // 初期位置設定
+                        Iwashi[i].transform.localPosition = IwashiModel[i].transform.localPosition;
+                        Iwashi[i].transform.localRotation = IwashiModel[i].transform.localRotation;
+                    }
+
+                    Pop = true;
                 }
-
-                seisei = true;
+                else
+                {
+                    UpdateTimer();
+                }
             }
         }
     }

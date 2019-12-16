@@ -91,32 +91,8 @@ public class MoveIwashi : MonoBehaviour
         {
             // 回転(滑らかに)
             transform.localRotation = Quaternion.Slerp(transform.localRotation, TarRot, Time.deltaTime * TurningSpeed);
-
-            //if (CheckRotate(TarRot, transform.localRotation))
-            //{
-            //    change = false;
-            //}
-
-            //Debug.Log("a");
         }
 
         count += Time.deltaTime;
-    }
-
-
-    // いわしの角度が目的角度に達したかどうか確認する関数
-    bool CheckRotate(Quaternion targetRotation, Quaternion Rotation)
-    {
-        if (targetRotation.x == Rotation.x)
-        {
-            if (targetRotation.y == Rotation.y)
-            {
-                if (targetRotation.z == Rotation.z)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 }

@@ -4,73 +4,65 @@ using UnityEngine;
 
 public class MoveSharkAsase : MonoBehaviour
 {
+    // 構造体
     [System.Serializable]
-    public class InitData
+    public struct SharkData
     {
-        public Vector3 position;
-        public Vector3 rotation;
-        public float limit;
+        public Vector3 position;    // 位置
+        public Vector3 rotation;    // 回転
     }
 
-    public int Mode = 0;
-
-    public float PopTime = 1.0f;
-
-    public List<InitData> InitDatas = new List<InitData>();
-    public int MoveMode = 0;
+    // public変数
+    public float MoveTime = 4.0f;
     public float Speed = 10.0f;
 
-    private float sum;
-    private float count;
+    // private変数
+    private int MoveNo;
+    private int DataNo;
+
+    private float MoveCount;
+
+    private SharkData Shark = new SharkData();
 
     private GameObject gameobject;
+    private SharkManager SharkScr;
 
-    private IwashiManager IwashiScr;
-
-    private void OnEnable()
+    // Start is called before the first frame update
+    private void Start()
     {
         // ゲームオブジェクトの探索
-        gameobject = GameObject.Find("Iwashi");
+        gameobject = GameObject.Find("Shark");
 
-        // IwashiManagerのSetIwashiメソッドを使用
-        IwashiScr = gameobject.GetComponent<IwashiManager>();
+        // SharkManagerコンポーネントを取得
+        SharkScr = gameobject.GetComponent<SharkManager>();
 
-        if (MoveMode < InitDatas.Count)
-        {
-            transform.localPosition = InitDatas[MoveMode].position;
-            transform.localRotation = Quaternion.Euler(InitDatas[MoveMode].rotation);
-        }
+        SetData();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IwashiScr.GetDelete())
+        if (SharkScr.CheckTime(MoveTime, MoveCount))
         {
-            if (PopTime < count)
-            {
-                if (Mode == 1)
-                {
-                    sum = InitDatas[MoveMode].limit + transform.localPosition.x;
+            MoveNo++;
+            MoveCount = 0.0f;
 
-                    if (sum > 0 && sum > InitDatas[MoveMode].limit * 2 || sum < 0 && sum < InitDatas[MoveMode].limit * 2)
-                    {
-                        if (MoveMode < InitDatas.Count - 1)
-                        {
-                            MoveMode++;
-                            //MoveMode %= InitDatas.Count;
-
-                            transform.localPosition = InitDatas[MoveMode].position;
-                            transform.localRotation = Quaternion.Euler(InitDatas[MoveMode].rotation);
-                        }
-                    }
-                }
-                transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
-            }
-            else
-            {
-                count += Time.deltaTime;
-            }
+            SetData();
         }
+        else
+        {
+            transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
+
+            MoveCount = SharkScr.CountUp(MoveCount);
+        }
+    }
+
+    // データの格納と設定
+    void SetData()
+    {
+        SharkScr.SetShark(ref Shark.position, ref Shark.rotation);
+
+        transform.localPosition = Shark.position;
+        transform.localRotation = Quaternion.Euler(Shark.rotation);
     }
 }
