@@ -39,6 +39,7 @@ public class AnkouMove : MonoBehaviour
                 if(Timer >= BeginSlowMotionTime)
                 {
                     UIManager.Instance.AvoidanceUI.SetActive(true);
+                    LedState.Instance.Set(LedState.Situation.DODGE);
                     State++;
                     Timer = 0.0f;
                     Time.timeScale = 0.3f;
@@ -49,6 +50,7 @@ public class AnkouMove : MonoBehaviour
                 if(Timer >= SlowMotionDuration*Time.timeScale)
                 {
                     UIManager.Instance.AvoidanceUI.SetActive(false);
+                    LedState.Instance.Set(MainSceneController.Instance.DefaultLedSituation);
                     State++;
                     Timer = 0.0f;
                     Time.timeScale = 1.0f;

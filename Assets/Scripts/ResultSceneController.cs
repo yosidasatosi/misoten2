@@ -9,6 +9,7 @@ public class ResultSceneController : MonoBehaviour
     void Start()
     {
         FadeInOut.Instance.FadeIn(1.0f);
+        LedState.Instance.Set(LedState.Situation.RESULT);
     }
 
     // Update is called once per frame

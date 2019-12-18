@@ -9,6 +9,7 @@ public class TitleSceneController : MonoBehaviour
     void Start()
     {
         FadeInOut.Instance.FadeIn(1.0f);
+        PlayerBase.ResetHpSave();
     
     }
 

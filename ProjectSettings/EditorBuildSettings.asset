@@ -21,18 +21,21 @@ EditorBuildSettings:
     path: Assets/Scenes/sinkai.unity
     guid: 00c1e3c549a75ed44ac8ead383928e7f
   - enabled: 1
-    path: Assets/Scenes/hatenaStartEvent.unity
-    guid: 43a3e8928c57c804e831967c9e25d189
-  - enabled: 1
     path: Assets/Scenes/hatena.unity
     guid: d09353688f4561f4c8ab5e5f217874a9
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 573fcef729a920c4db4477ccae34cf62
   - enabled: 1
+    path: Assets/Scenes/hatenaStartEvent.unity
+    guid: 43a3e8928c57c804e831967c9e25d189
+  - enabled: 1
     path: Assets/Scenes/kaikouStartEvent.unity
     guid: ebcc09ee7a7fe7d40b95481db268078b
   - enabled: 1
     path: Assets/Scenes/sinkaiStartEvent.unity
     guid: 7369e92ab6f0b98459156a2b86e419e5
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ff037c064872dca4883a62b5d8100a50
   m_configObjects: {}
