@@ -17,7 +17,8 @@ public class MainSceneController : SingletonMonoBehaviour<MainSceneController>
         {
             FadeInOut.Instance.FadeIn(1.0f, () => StageNameAnim?.Play());
         }
-        LedState.Instance.Set(DefaultLedSituation);
+        //LedState.Instance.Set(DefaultLedSituation);
+        LedState.Instance.Set(LedState.Situation.DODGE);
     }
 
     // Update is called once per frame

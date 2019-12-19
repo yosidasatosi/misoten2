@@ -35,10 +35,13 @@ public class LedState : SingletonMonoBehaviour<LedState>
     // Update is called once per frame
     void Update()
     {
+       //Set(Situation.DANGER);
     }
 
     public void Set(Situation no)
     {
-        m_arduSerialPort.Write(no.ToString());
+        int situation = (int)no;
+
+        m_arduSerialPort.Write(situation.ToString());
     }
 }

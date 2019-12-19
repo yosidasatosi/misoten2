@@ -10,7 +10,8 @@ public class TitleSceneController : MonoBehaviour
     {
         FadeInOut.Instance.FadeIn(1.0f);
         PlayerBase.ResetHpSave();
-    
+        LedState.Instance.Set(LedState.Situation.TITLE);
+
     }
 
     // Update is called once per frame
