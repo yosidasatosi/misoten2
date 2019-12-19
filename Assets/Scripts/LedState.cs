@@ -27,7 +27,7 @@ public class LedState : SingletonMonoBehaviour<LedState>
     // Start is called before the first frame update
     void Start()
     {
-        m_arduSerialPort.PortName = "COM3";
+        m_arduSerialPort.PortName = "COM4";
         m_arduSerialPort.BaudRate = 115200;
         m_arduSerialPort.Open();
     }
@@ -39,6 +39,7 @@ public class LedState : SingletonMonoBehaviour<LedState>
 
     public void Set(Situation no)
     {
-        m_arduSerialPort.Write(no.ToString());
+        int scene = (int)no; 
+        m_arduSerialPort.Write(scene.ToString());
     }
 }
