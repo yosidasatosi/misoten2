@@ -40,7 +40,7 @@ public class MoveTo : MonoBehaviour
     private float moveTime = 0.5f;
     private float interval = 7.0f;
     private float startTime;
-    private int time;
+    private float time;
 
     // Start is called before the first frame update
     void Start()
@@ -124,7 +124,7 @@ public class MoveTo : MonoBehaviour
     {
         if (data.endPosData[patternState] == new Vector3(0.0f, 0.0f, 0.0f)) return;
 
-        if (time == 150) moveOn = false;
+        if (time > 2.5) moveOn = false;
 
         if (!moveOn)
         {
@@ -138,7 +138,7 @@ public class MoveTo : MonoBehaviour
             // 移動
             transform.position =
                 Vector3.SmoothDamp(transform.position, data.endPos, ref velocity, moveTime);
-            time++;
+            time += Time.deltaTime;
         }
 
     }
