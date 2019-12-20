@@ -1679,6 +1679,19 @@ MonoBehaviour:
   end: 0300000007000000
   interval: 0400000002000000
   patternCnt: 0400000003000000
+--- !u!114 &527904862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527904855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39caabe08c8a91840ae296745c270a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1320412827}
 --- !u!1001 &529975399
 PrefabInstance:
   m_ObjectHideFlags: 0
