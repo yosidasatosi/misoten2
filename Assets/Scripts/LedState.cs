@@ -29,7 +29,15 @@ public class LedState : SingletonMonoBehaviour<LedState>
     {
         m_arduSerialPort.PortName = "COM4";
         m_arduSerialPort.BaudRate = 115200;
-        m_arduSerialPort.Open();
+        try
+        {
+            m_arduSerialPort.Open();
+        }
+        catch(System.Exception e)
+        {
+            Debug.LogWarning(e.Message);
+        }
+        
     }
 
     // Update is called once per frame
@@ -39,7 +47,10 @@ public class LedState : SingletonMonoBehaviour<LedState>
 
     public void Set(Situation no)
     {
-        int scene = (int)no; 
-        m_arduSerialPort.Write(scene.ToString());
+        if(m_arduSerialPort.IsOpen)
+        {
+            int scene = (int)no;
+            m_arduSerialPort.Write(scene.ToString());
+        }        
     }
 }
