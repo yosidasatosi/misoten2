@@ -9,6 +9,7 @@ public class AnkouMove : MonoBehaviour
     public float Zspeed = 10.0f;
     public float Yspeed = 2.0f;
 
+    public float SlowMotionScale = 0.1f;
     public float BeginSlowMotionTime = 0.5f;
     public float SlowMotionDuration = 0.5f;
 
@@ -39,10 +40,10 @@ public class AnkouMove : MonoBehaviour
                 if(Timer >= BeginSlowMotionTime)
                 {
                     UIManager.Instance.AvoidanceUI.SetActive(true);
-                    LedState.Instance.Set(LedState.Situation.DODGE);
+                    LedState.Instance.Set(LedState.Situation.DANGER);
                     State++;
                     Timer = 0.0f;
-                    Time.timeScale = 0.3f;
+                    Time.timeScale = SlowMotionScale;
                 }
                 break;
 

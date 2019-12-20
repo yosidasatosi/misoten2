@@ -95,6 +95,7 @@ namespace AnimaroidLib
             }
         }
         public float Progress { get; protected set; }
+        public float InverseProgress { get { return 1.0f - Progress; }}
 
         public Timer(float interval = 1.0f)
         {

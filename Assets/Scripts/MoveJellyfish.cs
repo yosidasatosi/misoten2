@@ -1,33 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AnimaroidLib;
 
 public class MoveJellyfish : MonoBehaviour
 {
-    [System.Serializable]
-    public class InitData
-    {
-        public Vector3 position;
-        public Vector3 rotation;
-    }
+    public float LeftSpeed = 1.0f;
+    public float FallSpeed =0.3f;
+    public float InitUpSpeed = 1.0f;
+    public float BlendTime = 0.3f;
+    public float UpDamp = 1.0f;
 
-    public List<InitData> InitDatas = new List<InitData>();
-    public int MoveMode = 0;
-    public float Speed =10.0f;
+    private float UpSpeed;
+    private bool IsMoveUp = false;
+    private Timer timer = new Timer();
 
-    private void OnEnable()
+    private void Start()
     {
-        if(MoveMode < InitDatas.Count)
-        {
-            transform.localPosition = InitDatas[MoveMode].position;
-            transform.localRotation = Quaternion.Euler(InitDatas[MoveMode].rotation);
-        }        
+        timer.Reset(BlendTime);
+        UpSpeed = InitUpSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-Speed * Time.deltaTime, 0.0f, 0.0f, Space.Self);
+        timer++;
 
+        Vector3 up = (UpSpeed-=(UpDamp * Time.deltaTime)) * Vector3.up;
+        Vector3 down = FallSpeed * Vector3.down;
+        Vector3 speed = LeftSpeed*Vector3.left + Vector3.Lerp(up, down, IsMoveUp ? timer.InverseProgress : timer.Progress);
+        transform.Translate(speed * Time.deltaTime, Space.Self);
+    }
+
+    public void OnMoveUp()
+    {
+        IsMoveUp = true;
+        UpSpeed = InitUpSpeed;
+        timer.Reset();
+    }
+
+    public void OnStopMoveUp()
+    {
+        IsMoveUp = false;
+        timer.Reset();
     }
 }

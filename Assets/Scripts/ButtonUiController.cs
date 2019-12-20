@@ -36,6 +36,7 @@ public class ButtonUiController : MonoBehaviour
 
         UIManagerByTime(nowTime);
         CheckCnt();
+
     }
 
     // パターンの変更
@@ -61,18 +62,20 @@ public class ButtonUiController : MonoBehaviour
     void UIManagerByTime(float nowTime)
     {
         // 時間によるパターンの変更
-        if ((int)nowTime >= changeTime)
+        if ((int)nowTime == changeTime)
         {
             drawCnt++;
             startTime = Time.realtimeSinceStartup;
         }
-        else if ((int)nowTime >= end[pattern])
+        else if ((int)nowTime == end[pattern])
         {
             Button.SetActive(false);
+            GetComponent<ButtonLed>().enabled = false;
         }
-        else if ((int)nowTime >= start[pattern])
+        else if ((int)nowTime == start[pattern])
         {
             Button.SetActive(true);
+            GetComponent<ButtonLed>().enabled = true ;
         }
     }
 }

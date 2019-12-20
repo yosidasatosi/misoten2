@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7922459912751454696}
   - component: {fileID: 7922459912751454703}
   - component: {fileID: 7922459912751454702}
+  - component: {fileID: -3163052805252946961}
   m_Layer: 0
   m_Name: AnkouLight
   m_TagString: Untagged
@@ -106,4 +107,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GrowingTime: 4
   ShrinkTime: 2
+  TriggerTime: 2
   Ankou: {fileID: 100030, guid: 2b50495284bf5884fa42bfbed362f41d, type: 3}
+--- !u!114 &-3163052805252946961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922459912751454700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340b4a7a43f9f994bbc13f83f492492c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: {x: 0.6, y: 0.6, z: 0}
+  Speed: {x: 1.5, y: 1, z: 0}
+  RandomParam: {x: 0, y: 45, z: 0}
