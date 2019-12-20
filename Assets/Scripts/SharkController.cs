@@ -49,7 +49,7 @@ public class SharkController : MonoBehaviour
     private int nextState;        // 次のパターン番号
     public float slowStartTime;   // スローモーションの開始時間
     private Animator anim;
-    private int atcTime;
+    private float atcTime;
     private bool atcFlag;
     private bool changeState;
     public int changeMove;          // moveの関数変更開始パターン
@@ -253,7 +253,7 @@ public class SharkController : MonoBehaviour
     //=========================================================
     void SecondMove()
     {
-        if (atcTime > 90)
+        if (atcTime > 1.5f)
         {
             // 移動
             shark[modelState].transform.position =
@@ -264,7 +264,7 @@ public class SharkController : MonoBehaviour
             // 移動
             shark[modelState].transform.position =
                 Vector3.SmoothDamp(shark[modelState].transform.position, data.endPos, ref velocity, moveTime);
-            atcTime++;
+            atcTime += Time.deltaTime;
         }
     }
 
