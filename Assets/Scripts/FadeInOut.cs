@@ -9,9 +9,16 @@ public class FadeInOut : Singleton<FadeInOut> {
 
     public const float fadeTime = 1.0f;
 
+    public enum EState
+    {
+        None,
+        FadeIn,
+        FadeOut,
+    }
+
+    public EState State { get; private set; }
     private RawImage image;
-    private bool FI,FO;
-    private System.Action callBackIn, callBackOut;
+    private System.Action callBack;
     private Timer timer;
 
     public float Alpha
@@ -53,8 +60,7 @@ public class FadeInOut : Singleton<FadeInOut> {
         rectTransform.localPosition = Vector3.zero;
         rectTransform.localScale = Vector3.one;
 
-        FI = false;
-        FO = false;
+        State = EState.None;
 
         timer = new Timer(fadeTime);
 
@@ -64,39 +70,20 @@ public class FadeInOut : Singleton<FadeInOut> {
     private void FixedUpdate()
     {
         timer++;
+        Alpha = Mathf.Clamp01(State == EState.FadeIn ? timer.InverseProgress : timer.Progress);
 
-        if(FI == true && FO == false)
+        if(timer.TimesUp())
         {
-            Alpha = Mathf.Max(0.0f, 1.0f - timer.Progress);
-
-            if (Alpha <= 0f)
-            {
-                FI = false;
-                enabled = false;
-
-                callBackIn?.Invoke();
-            }
-
-        }
-        else if(FI == false && FO == true)
-        {
-            Alpha = Mathf.Min(1.0f, timer.Progress);
-
-            if (Alpha >= 1f)
-            {
-                FO = false;
-                enabled = false;
-
-                callBackOut?.Invoke();
-            }
-
+            State = EState.None;
+            enabled = false;
+            callBack?.Invoke();
         }
     }
 
     public void FadeIn(float fadeTime, System.Action callBack = null)
     {
-        FI = true;
-        this.callBackIn = callBack;
+        State = EState.FadeIn;
+        this.callBack = callBack;
         timer.Reset(fadeTime);
         enabled = true;
     }
@@ -108,8 +95,8 @@ public class FadeInOut : Singleton<FadeInOut> {
 
     public void FadeOut(float fadeTime, System.Action callBack = null)
     {
-        FO = true;
-        this.callBackOut = callBack;
+        State = EState.FadeOut;
+        this.callBack = callBack;
         timer.Reset(fadeTime);
         enabled = true;
     }

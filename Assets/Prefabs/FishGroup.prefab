@@ -9,9 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2940584223670507987}
-  - component: {fileID: 2940584223670507988}
   - component: {fileID: 2940584223670507986}
-  - component: {fileID: 2940584223670507985}
   m_Layer: 0
   m_Name: FishGroup
   m_TagString: Untagged
@@ -33,27 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2940584223670507988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2940584223670507989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094dbf385a94c412794e1d18e879fcf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxChild: 30
-  BoidsChild: {fileID: 9134894366559780053, guid: 85100aab09841446485130738a76b43e,
-    type: 3}
-  BoidsChildren: []
-  BoidsBoss: {fileID: 9134894366559780053, guid: 85100aab09841446485130738a76b43e,
-    type: 3}
-  BoidsCenter: {fileID: 0}
-  Turbulence: 1
-  Distance: 5
 --- !u!114 &2940584223670507986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,15 +47,3 @@ MonoBehaviour:
   boidPrefab: {fileID: 5427972581634066228, guid: 4cf87bb576b5a4c7bb12539c44552f04,
     type: 3}
   param: {fileID: 11400000, guid: ecd5b790c47a241ae9ee02f0abd9f6c2, type: 2}
---- !u!114 &2940584223670507985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2940584223670507989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c92c038515242d28f997db276ea56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
