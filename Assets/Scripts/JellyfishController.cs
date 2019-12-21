@@ -12,6 +12,7 @@ public class JellyfishController : MonoBehaviour
 
     private float Timer = 0;
     private bool ParticleStop = false;
+    private bool LastVisible = false;
     private GameObject Particle;
     private Collider MyCollider;
     private Renderer MyRenderer;
@@ -21,6 +22,7 @@ public class JellyfishController : MonoBehaviour
     {
         MyCollider = GetComponent<SphereCollider>();
         MyRenderer = GetComponentInChildren<Renderer>();
+        LastVisible = MyRenderer?.isVisible ?? false;
     }
 
     // Update is called once per frame
@@ -53,6 +55,11 @@ public class JellyfishController : MonoBehaviour
                 Timer = 0.0f;
             }
         }
+        if(LastVisible && !MyRenderer.isVisible)
+        {
+            LedState.Instance.Set(SceneControllerBase.Instance.DefaultLedSituation);
+        }
+        LastVisible = MyRenderer.isVisible;
 
         if (transform.localPosition.x <= -10.0f)
         {
