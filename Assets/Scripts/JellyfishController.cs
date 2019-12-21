@@ -47,5 +47,13 @@ public class JellyfishController : MonoBehaviour
             }
             Timer = 0.0f;
         }
+
+
+        if (transform.localPosition.x <= -10.0f)
+        {
+            Destroy(gameObject);
+
+        }
     }
+
 }

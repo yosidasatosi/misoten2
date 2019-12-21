@@ -67,13 +67,13 @@ public class PlayerBase : MonoBehaviour
         {
             Death();
             int sum = 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 2; i++)
             {
                 sum += HPsave[i];
             }
-            if(sum == 0)
+            if (sum == 0)
             {
-                SceneManager.LoadScene("GameOver");
+                FadeInOut.Instance.FadeOut(1.0f, () => SceneManager.LoadScene("GameOver"));
             }
         }
 

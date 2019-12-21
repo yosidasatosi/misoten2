@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour {
     [SerializeField]
-    private bool dontDestroyOnLoad = false;
+    protected bool dontDestroyOnLoad = false;
     private static T instance;
     public static T Instance {
         get {
