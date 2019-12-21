@@ -16,7 +16,6 @@ public class EventMoveController : MonoBehaviour
     };
 
     // パターン関係データ
-    public GameObject obj;
     public MoveData data;           // 動きのデータ
     public int   patternState;      // 現在のパターン番号
     public float[] changeTime;      // パターン変更時間
@@ -42,11 +41,11 @@ public class EventMoveController : MonoBehaviour
     {
         // 現在時間の取得
         float nowTime = Time.realtimeSinceStartup - startTime;
-        Vector3 diff = data.endPos - obj.transform.position;
+        Vector3 diff = data.endPos - transform.position;
 
         if (diff.magnitude > 0.01f)
         {
-            obj.transform.rotation = Quaternion.LookRotation(diff); //向きを変更する
+            transform.rotation = Quaternion.LookRotation(diff); //向きを変更する
         }
 
         // パターンの変更チェック
@@ -65,7 +64,7 @@ public class EventMoveController : MonoBehaviour
         nextState++;
 
         // 位置の設定
-        obj.transform.SetPositionAndRotation(data.startData[patternState], data.rotData[patternState]);
+        transform.SetPositionAndRotation(data.startData[patternState], data.rotData[patternState]);
         startTime = Time.realtimeSinceStartup;
 
         data.endPos = data.endPosData[patternState];
@@ -89,7 +88,7 @@ public class EventMoveController : MonoBehaviour
     void Move()
     {
         // 移動
-        obj.transform.position =
-            Vector3.SmoothDamp(obj.transform.position, data.endPos, ref velocity, moveTime[patternState]);
+        transform.position =
+            Vector3.SmoothDamp(transform.position, data.endPos, ref velocity, moveTime[patternState]);
     }
 }
