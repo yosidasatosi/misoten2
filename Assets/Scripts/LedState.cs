@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LedState : SingletonMonoBehaviour<LedState>
 {
-    private SerialPort m_arduSerialPort = new SerialPort();
+    private static SerialPort m_arduSerialPort = new SerialPort();
 
     // LEDエフェクトの種類
     public enum Situation
@@ -22,22 +22,29 @@ public class LedState : SingletonMonoBehaviour<LedState>
     // Start is called before the first frame update
     void Start()
     {
-        m_arduSerialPort.PortName = "COM4";
-        m_arduSerialPort.BaudRate = 115200;
-        try
+        if (!m_arduSerialPort.IsOpen)
         {
-            m_arduSerialPort.Open();
+            try
+            {
+                m_arduSerialPort.PortName = "COM4";
+                m_arduSerialPort.BaudRate = 9600;
+                m_arduSerialPort.Open();
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogWarning(e.Message);
+            }
         }
-        catch(System.Exception e)
-        {
-            Debug.LogWarning(e.Message);
-        }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    void OnApplicationQuit()
+    {
+        m_arduSerialPort.Close();
     }
 
     public void Set(Situation no)
