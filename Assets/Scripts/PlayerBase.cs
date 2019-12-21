@@ -46,23 +46,19 @@ public class PlayerBase : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-        
-    }
-
     public void Damage(int damagePoint)
     {
-        if(MyDamageFlash && MyDamageFlash.enabled)
+        if((MyDamageFlash && MyDamageFlash.enabled) || HP <= 0)
         {
             return;
         }
 
         HP = Mathf.Max(HP - damagePoint, 0);
         HPsave[PlayerNo - 1] = HP;
+        if(HPUI)
+        {
+            HPUI.OnDamage();
+        }
         if (MyDamageFlash)
         {
             MyDamageFlash.enabled = true;
@@ -102,9 +98,6 @@ public class PlayerBase : MonoBehaviour
             Destroy(gameObject, 3.0f);
 
         }
-
-        
-            
     }
 
 }

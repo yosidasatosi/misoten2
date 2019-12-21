@@ -3,23 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleSceneController : MonoBehaviour
+public class TitleSceneController : SceneControllerBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        FadeInOut.Instance.FadeIn(1.0f);
-        PlayerBase.ResetHpSave();
-        LedState.Instance.Set(LedState.Situation.TITLE);
+    public bool CameraAnimStop = false;
 
+    private TitleLogoEffect MyTitleLogoEffect;
+    private bool IsEndding = false;
+
+    // Start is called before the first frame update
+    protected override void Start()
+    {
+        base.Start();
+        PlayerBase.ResetHpSave();
+        MyTitleLogoEffect = FindObjectOfType<TitleLogoEffect>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(!IsEndding && CameraAnimStop && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("asase");
+            IsEndding = true;
+            MyTitleLogoEffect.StartEffect();
+            StartCoroutine("GoNextSceneAfterEffect");
         }        
+    }
+
+    IEnumerator GoNextSceneAfterEffect()
+    {
+        yield return new WaitForSeconds(3.0f);
+        GoNextScene();
     }
 }

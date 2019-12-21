@@ -22,8 +22,6 @@ public class TitleLogoEffect : MonoBehaviour
     /// </summary>
     public bool cameraAnimStop = false;
 
-
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,29 +35,18 @@ public class TitleLogoEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameStart();
-    }
-
-
-    void GameStart()
-    {
-
-        if (cameraAnimStop && Input.GetKeyDown(KeyCode.Space))
-        {
-            logoSprite.enabled = false;
-            particle.Play();
-            //SceneManager.LoadScene("asase");
-        }
-
         if (cameraAnimStop)
         {
             //CameraRot = true;
             bubble.SetActive(true);
         }
-
     }
 
-
+    public void StartEffect()
+    {
+        logoSprite.enabled = false;
+        particle.Play();
+    }
 
 
 

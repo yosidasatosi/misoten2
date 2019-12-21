@@ -32,10 +32,11 @@ public class JellyfishController : MonoBehaviour
             if(ParticleStop)
             {
                 Destroy(Particle);
-
+                LedState.Instance.Set(SceneControllerBase.Instance.DefaultLedSituation);
             }
             else
             {
+                LedState.Instance.Set(LedState.Situation.FLASH);
                 Particle = Instantiate(ParticlePrefab, transform.position, Quaternion.identity);
                 Particle.transform.localScale = Vector3.one * ParticleScale;
             }

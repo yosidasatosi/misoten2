@@ -40,6 +40,11 @@ public class CameraRotation : MonoBehaviour
     public void CameraRot()
     {
         //animator.SetBool("AnimationStop", true);
+        var titleSceneController = SceneControllerBase.Instance as TitleSceneController;
+        if(titleSceneController)
+        {
+            titleSceneController.CameraAnimStop = true;
+        }
         logoEffect.cameraAnimStop = true;
         rotStart = true;
     }
