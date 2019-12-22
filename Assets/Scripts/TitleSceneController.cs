@@ -21,12 +21,17 @@ public class TitleSceneController : SceneControllerBase
     // Update is called once per frame
     void Update()
     {
-        if(!IsEndding && CameraAnimStop && Input.GetKeyDown(KeyCode.Return))
+
+        if (Input.GetButtonDown("push1") || Input.GetKeyDown(KeyCode.Return))
         {
-            IsEndding = true;
-            MyTitleLogoEffect.StartEffect();
-            StartCoroutine("GoNextSceneAfterEffect");
-        }        
+            if(!IsEndding && CameraAnimStop)
+            //if(!IsEndding && CameraAnimStop && Input.GetKeyDown(KeyCode.Return))
+            {
+                IsEndding = true;
+                MyTitleLogoEffect.StartEffect();
+                StartCoroutine("GoNextSceneAfterEffect");
+            }
+        }
     }
 
     IEnumerator GoNextSceneAfterEffect()
