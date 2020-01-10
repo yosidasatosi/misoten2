@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
             progress = Timer / 0.3f;
             transform.localPosition = Vector3.Lerp(LastPosition, AvoidencePosition, IsReturn ? 1.0f - progress : progress );
             yield return null;
+          
         }
 
         if(IsReturn)

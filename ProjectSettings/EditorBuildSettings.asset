@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 573fcef729a920c4db4477ccae34cf62
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/kaikou.unity
     guid: 5b4c2e5967e75d341a8b9f7b4a6f75ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/sinkaiStartEvent.unity
     guid: 7369e92ab6f0b98459156a2b86e419e5
   - enabled: 1
