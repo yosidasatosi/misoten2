@@ -76,6 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367688f9778ff054b9181183c4e0fe69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InitHP: 100
+  HPUI: {fileID: 0}
+  GhostMat: {fileID: 2100000, guid: 93610b353fbaf7041b1dd9a3c3371818, type: 2}
+  Sumida: {fileID: 7175950370523835909, guid: 0e7c3e5ab5ed8fb4d9fbd3a6e491d99c, type: 3}
 --- !u!114 &4717928444417550384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNo: 1
+  EnableLimitMoveRange: 1
   moveRange: {x: 6, y: 4, z: 8}
   Speed: 10
   Yoffset: -2

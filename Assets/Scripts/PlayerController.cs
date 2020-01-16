@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [Range(1,4)]
     public int PlayerNo = 1;
+    public bool HorizontalScrollMode = false;
     public bool EnableLimitMoveRange = true;
     public Vector3 moveRange = new Vector3(5.0f, 3.0f, 8.0f);
     public float Speed = 10.0f;
@@ -43,7 +44,13 @@ public class PlayerController : MonoBehaviour
             input.y = Input.GetAxis("LeftStickY" + PlayerNo);
             input.z = 0.0f;
 
-            transform.Translate(input * Speed * Time.deltaTime);
+            if (HorizontalScrollMode)
+            {
+                input.z = input.x;
+                input.x = 0.0f;
+            }
+
+            transform.Translate(input * Speed * Time.deltaTime, Space.Self);
 
             // アクション処理
             if(Input.GetAxis("Action" + PlayerNo) > 0.0f)
@@ -56,25 +63,48 @@ public class PlayerController : MonoBehaviour
     void LateUpdate()
     {
         Vector3 cameraPos = MainCamera.transform.position;
-        if(EnableLimitMoveRange)
+        if(HorizontalScrollMode)
         {
-            transform.position = new Vector3
+            if (EnableLimitMoveRange)
             {
-                x = Mathf.Clamp(transform.position.x, cameraPos.x - moveRange.x, cameraPos.x + moveRange.x),
-                y = Mathf.Clamp(transform.position.y, cameraPos.y - moveRange.y + Yoffset, cameraPos.y + moveRange.y + Yoffset),
-                z = cameraPos.z + moveRange.z
-            };
+                transform.position = new Vector3
+                {
+                    x = cameraPos.x + moveRange.x,
+                    y = Mathf.Clamp(transform.position.y, cameraPos.y - moveRange.y + Yoffset, cameraPos.y + moveRange.y + Yoffset),
+                    z = Mathf.Clamp(transform.position.z, cameraPos.z - moveRange.z, cameraPos.z + moveRange.z)
+                };
+            }
+            else
+            {
+                transform.position = new Vector3
+                {
+                    x = cameraPos.x + moveRange.x,
+                    y = transform.position.y,
+                    z = transform.position.z
+                };
+            }
         }
         else
         {
-            transform.position = new Vector3
+            if (EnableLimitMoveRange)
             {
-                x = transform.position.x,
-                y = transform.position.y,
-                z = cameraPos.z + moveRange.z
-            };
+                transform.position = new Vector3
+                {
+                    x = Mathf.Clamp(transform.position.x, cameraPos.x - moveRange.x, cameraPos.x + moveRange.x),
+                    y = Mathf.Clamp(transform.position.y, cameraPos.y - moveRange.y + Yoffset, cameraPos.y + moveRange.y + Yoffset),
+                    z = cameraPos.z + moveRange.z
+                };
+            }
+            else
+            {
+                transform.position = new Vector3
+                {
+                    x = transform.position.x,
+                    y = transform.position.y,
+                    z = cameraPos.z + moveRange.z
+                };
+            }
         }
-
     }
 
     void StartAvoidance()

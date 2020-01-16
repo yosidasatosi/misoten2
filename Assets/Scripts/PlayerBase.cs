@@ -7,6 +7,8 @@ public class PlayerBase : MonoBehaviour
 {
     public int InitHP = 100;
     public UIHP HPUI;
+    public Material GhostMat;
+    public GameObject Sumida;
     
     public  int HP
     {
@@ -42,7 +44,7 @@ public class PlayerBase : MonoBehaviour
         HP = (HPsave[PlayerNo - 1] > -1) ? HPsave[PlayerNo - 1] : InitHP;
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            SetGhostMat();
         }
     }
 
@@ -67,7 +69,7 @@ public class PlayerBase : MonoBehaviour
         {
             Death();
             int sum = 0;
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 4; i++)
             {
                 sum += HPsave[i];
             }
@@ -91,12 +93,15 @@ public class PlayerBase : MonoBehaviour
 
     public void Death()
     {
-        if(Controller)
-        {
-            
-            Controller.enabled = false;
-            Destroy(gameObject, 3.0f);
+        SetGhostMat();
+        Instantiate(Sumida, transform);
+    }
 
+    public void SetGhostMat()
+    {
+        foreach (var renderer in GetComponentsInChildren<Renderer>())
+        {
+            renderer.material = GhostMat;
         }
     }
 

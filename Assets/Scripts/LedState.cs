@@ -10,13 +10,17 @@ public class LedState : SingletonMonoBehaviour<LedState>
     // LEDエフェクトの種類
     public enum Situation
     {
-        TITLE = 1,
-        SEA,
-        DEEP,
-        EVENT,
-        FLASH,
-        DANGER,
-        RESULT
+        TITLE = 1,  // タイトル画面
+        SEA,          // 浅瀬
+        DEEP,         // 深海
+        BOSS,         // サメ
+        EVENT_A,      // 浅瀬→海溝
+        EVENT_B,      // 海溝→深海
+        EVENT_C,      // 深海→サメ
+        ACTION,       // 海溝のアクション時
+        FLASH,        // クラゲ
+        DANGER,       // ボタンアクション
+        RESULT        // リザルト画面
     };
 
     // Start is called before the first frame update
