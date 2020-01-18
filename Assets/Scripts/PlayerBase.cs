@@ -19,6 +19,7 @@ public class PlayerBase : MonoBehaviour
         private set
         {
             PrivateHP = value;
+            HPsave[PlayerNo - 1] = HP;
             if (HPUI)
             {
                 HPUI.SetPercent(HP / (float)InitHP);
@@ -56,7 +57,6 @@ public class PlayerBase : MonoBehaviour
         }
 
         HP = Mathf.Max(HP - damagePoint, 0);
-        HPsave[PlayerNo - 1] = HP;
         if(HPUI)
         {
             HPUI.OnDamage();

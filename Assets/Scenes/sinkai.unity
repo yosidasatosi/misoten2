@@ -16724,6 +16724,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: StopTime
@@ -16739,11 +16744,6 @@ PrefabInstance:
         type: 3}
       propertyPath: LeftSpeed
       value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50d34c3bb80f34181ce5de0071e3a7, type: 3}
@@ -52296,6 +52296,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: TimeBeforeDisable
@@ -52311,11 +52316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: LeftSpeed
       value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50d34c3bb80f34181ce5de0071e3a7, type: 3}
@@ -58023,6 +58023,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: ParticlePrefab
@@ -58034,13 +58039,74 @@ PrefabInstance:
       propertyPath: LeftSpeed
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50d34c3bb80f34181ce5de0071e3a7, type: 3}
+--- !u!1 &1321979612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321979615}
+  - component: {fileID: 1321979614}
+  - component: {fileID: 1321979613}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1321979613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321979612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1321979614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321979612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1321979615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321979612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323222834
 GameObject:
   m_ObjectHideFlags: 0
@@ -62887,6 +62953,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: ParticleScale
@@ -62898,15 +62969,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1408261906453354, guid: e534962860a476e4daba6f4fcc6f2690,
         type: 3}
+    - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: StopTime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808418, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: LeftSpeed
       value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50d34c3bb80f34181ce5de0071e3a7, type: 3}
@@ -94501,6 +94572,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295119320725808445, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
       propertyPath: ParticlePrefab
@@ -94511,11 +94587,6 @@ PrefabInstance:
         type: 3}
       propertyPath: LeftSpeed
       value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295119320725808444, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3477299289529638305, guid: 0f50d34c3bb80f34181ce5de0071e3a7,
         type: 3}
