@@ -69,7 +69,7 @@ public class UtuboManager : MonoBehaviour
             Pop = false;
         }
     }
-
+    
     // 初期値データ数取得関数
     public int GetCount()
     {

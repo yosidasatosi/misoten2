@@ -12,6 +12,7 @@ public class LedState : SingletonMonoBehaviour<LedState>
     {
         TITLE = 1,  // タイトル画面
         SEA,          // 浅瀬
+        WALL,         // 海溝
         DEEP,         // 深海
         BOSS,         // サメ
         EVENT_A,      // 浅瀬→海溝
@@ -30,7 +31,7 @@ public class LedState : SingletonMonoBehaviour<LedState>
         {
             try
             {
-                m_arduSerialPort.PortName = "COM4";
+                m_arduSerialPort.PortName = "COM3";
                 m_arduSerialPort.BaudRate = 9600;
                 m_arduSerialPort.Open();
             }
@@ -40,7 +41,7 @@ public class LedState : SingletonMonoBehaviour<LedState>
             }
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {

@@ -61,7 +61,7 @@ public class JellyfishController : MonoBehaviour
         }
         LastVisible = MyRenderer.isVisible;
 
-        if (transform.localPosition.x <= -10.0f)
+        if (transform.localPosition.x <= -9.5f)
         {
             Destroy(gameObject);
 

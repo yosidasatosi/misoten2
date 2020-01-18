@@ -16,5 +16,11 @@ public class ChildShark1 : MonoBehaviour
     void Update()
     {
         transform.Translate(0.0f, 0.0f, Speed * Time.deltaTime, Space.Self);
+
+        if (transform.localPosition.x <= 23.5f)
+        {
+            Destroy(gameObject);
+
+        }
     }
 }
